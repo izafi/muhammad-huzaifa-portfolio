@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <section className="relative z-10 flex min-h-screen items-center">
+      <section className="relative z-10 flex min-h-screen items-center pt-8">
 
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-16 px-5 py-20 lg:flex-row lg:gap-10 lg:px-8">
 
@@ -51,11 +51,11 @@ const Hero = () => {
             {/* Buttons */}
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
 
-              <button className="rounded-full bg-purple-500 px-7 py-3 font-semibold text-white transition hover:bg-purple-600">
+              <button className="rounded-full bg-purple-500 px-7 py-3 font-semibold text-white transition hover:bg-purple-600 cursor-pointer">
                 View My Work
               </button>
 
-              <button className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition hover:bg-white/10">
+              <button className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition cursor-pointer hover:bg-white/10">
                 Contact Me
               </button>
 
