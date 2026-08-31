@@ -104,8 +104,7 @@ const CodePanel = () => {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="absolute -left-6 bottom-2 z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-left-10"
->
+  className="absolute -left-6 bottom-2 z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-left-10">   
   <span className="text-xl text-[#61DAFB]">⚛</span>
 
   <span className="ml-3 font-mono font-bold text-white">
