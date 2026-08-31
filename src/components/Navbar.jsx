@@ -76,22 +76,22 @@ const Navbar = () => {
                 <motion.span
                   initial={{
                     width: 0,
-                    left: "0%",
+                    right: "0%",
                   }}
                   animate={
                     hoveredLink === index
                       ? {
                           width: "100%",
-                          left: "0%",
+                          right: "0%",
                         }
                       : {
                           width: "0%",
-                          left: "100%",
+                          right: "100%",
                         }
                   }
                   transition={{
                     duration: 0.3,
-                    ease: "easeOut",
+                    ease: "easeInOut",
                   }}
                   className="
                     absolute
