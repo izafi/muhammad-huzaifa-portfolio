@@ -64,7 +64,7 @@ const Hero = () => {
           </div>
 
           {/* Right Code Panel */}
-          <div className="w-full lg:w-[45%]">
+          <div className="w-full lg:w-[45%] hidden lg:block">
             <CodePanel />
           </div>
 
