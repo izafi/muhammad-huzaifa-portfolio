@@ -49,7 +49,7 @@ const Hero = () => {
             </p>
 
             {/* Buttons */}
-            <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <div className="mt-8 flex flex-col justify-center gap-4 lg:justify-start lg:flex-row">
 
               <button className="rounded-full bg-purple-500 px-7 py-3 font-semibold text-white transition hover:bg-purple-600 cursor-pointer">
                 View My Work
