@@ -64,6 +64,7 @@ const About = () => {
             border border-white/10
             bg-white/[0.03]
             p-6
+            cursor-pointer
             transition-all duration-300
             hover:border-purple-500/40
             hover:bg-white/[0.05]
@@ -79,6 +80,7 @@ const About = () => {
                   rounded-xl
                   border border-purple-500/20
                   bg-purple-500/10
+                  
                   text-purple-400
                 "
               >
@@ -145,6 +147,7 @@ const About = () => {
             rounded-2xl
             border border-white/10
             bg-white/[0.03]
+            cursor-pointer
             p-6
           "
         >
