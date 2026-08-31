@@ -24,7 +24,7 @@ const Navbar = () => {
             className="flex items-center gap-3"
             onClick={() => setIsOpen(false)}
           >
-            <span className="hidden sm:block text-white font-semibold">
+            <span className="sm:block text-white font-semibold">
               Muhammad Huzaifa
             </span>
           </a>
@@ -35,7 +35,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-sm text-white hover:text-[#7C60FF] transition-colors duration-300"
               >
                 {link.name}
               </a>
