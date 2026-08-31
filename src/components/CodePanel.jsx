@@ -4,36 +4,26 @@ const codeSnippets = [
   {
     file: "Developer.jsx",
     language: "React",
-    code: `function Developer() {
-  const stack = [
-    "React",
-    "JavaScript",
-    "Tailwind CSS"
-  ];
-
-  return (
-    <Website
-      responsive
-      seoFriendly
-      modern
-    />
-  );
-}`,
+    code: `const developer = {
+  name: "Muhammad Huzaifa",
+  role: "Frontend Developer",
+  skills: ["React", "JavaScript", "Tailwind"],
+  available: true
+};`,
   },
 
   {
     file: "Portfolio.js",
     language: "JavaScript",
-    code: `const developer = {
-  name: "Muhammad Huzaifa",
-  role: "Frontend Developer",
-  skills: [
-    "React.js",
-    "JavaScript",
-    "Tailwind CSS"
-  ],
-  available: true
-};`,
+    code: `function Developer() {
+  return (
+    <Website
+      modern
+      responsive
+      seoFriendly
+    />
+  );
+}`,
   },
 
   {
@@ -41,18 +31,14 @@ const codeSnippets = [
     language: "Tailwind CSS",
     code: `.portfolio {
   @apply min-h-screen;
-  @apply bg-black;
-  @apply text-white;
+  @apply bg-black text-white;
 }
 
 .hero {
-  @apply flex;
-  @apply items-center;
-  @apply justify-center;
+  @apply flex items-center;
 }`,
   },
 ];
-
 const CodePanel = () => {
   const [snippetIndex, setSnippetIndex] = useState(0);
   const [displayedCode, setDisplayedCode] = useState("");
@@ -93,46 +79,47 @@ const CodePanel = () => {
     <div className="relative mx-auto w-full max-w-4xl px-4">
       {/* Floating Tech Badges */}
 
-     {/* React */}
+{/* Floating Tech Badges */}
+
+{/* React */}
 <motion.div
   animate={{
-    y: [0, -15, 0, 12, 0],
-    rotate: [0, 2, -2, 1, 0],
+    y: [0, -8, 0, 7, 0],
+    rotate: [0, 1, -1, 0.5, 0],
   }}
   transition={{
-    duration: 5,
+    duration: 9,
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="absolute -left-6 bottom-2 z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-left-10">   
-  <span className="text-xl text-[#61DAFB]">⚛</span>
-
-  <span className="ml-3 font-mono font-bold text-white">
-    React.js
+  className="absolute -left-4 bottom-2 z-20 rounded-xl border border-white/10 bg-[#171922]/80 px-4 py-3 shadow-xl backdrop-blur-xl md:-left-8"
+>
+  <span className="text-lg text-[#61DAFB]">⚛</span>
+  <span className="ml-2 font-mono font-bold text-white">
+    React
   </span>
 </motion.div>
 
 
-{/* Tailwind CSS */}
+{/* Tailwind */}
 <motion.div
   animate={{
-    y: [0, 12, 0, -10, 0],
-    rotate: [0, -2, 2, -1, 0],
+    y: [0, 7, 0, -6, 0],
+    rotate: [0, -1, 1, -0.5, 0],
   }}
   transition={{
-    duration: 6,
+    duration: 10,
     repeat: Infinity,
     ease: "easeInOut",
     delay: 0.5,
   }}
-  className="absolute -left-4 top-[65%] z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-left-5"
+  className="absolute -left-3 top-[65%] z-20 rounded-xl border border-white/10 bg-[#171922]/80 px-4 py-3 shadow-xl backdrop-blur-xl md:-left-4"
 >
   <span className="font-bold text-cyan-300">
     TW
   </span>
-
-  <span className="ml-3 font-mono font-bold text-white">
-    Tailwind CSS
+  <span className="ml-2 font-mono font-bold text-white">
+    Tailwind
   </span>
 </motion.div>
 
@@ -140,63 +127,59 @@ const CodePanel = () => {
 {/* JavaScript */}
 <motion.div
   animate={{
-    y: [0, -12, 0, 15, 0],
-    rotate: [0, 2, -1, 2, 0],
+    y: [0, -7, 0, 8, 0],
+    rotate: [0, 1, -0.5, 1, 0],
   }}
   transition={{
-    duration: 5.5,
+    duration: 9.5,
     repeat: Infinity,
     ease: "easeInOut",
     delay: 1,
   }}
-  className="absolute -right-4 -bottom-8 z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-right-10"
+  className="absolute -right-3 -bottom-6 z-20 rounded-xl border border-white/10 bg-[#171922]/80 px-4 py-3 shadow-xl backdrop-blur-xl md:-right-8"
 >
   <span className="font-bold text-yellow-300">
     JS
   </span>
-
-  <span className="ml-3 font-mono font-bold text-white">
-    JavaScript
-  </span>
 </motion.div>
 
 
-{/* HTML5 */}
+{/* HTML */}
 <motion.div
   animate={{
-    y: [0, -10, 0, 14, 0],
-    rotate: [0, -2, 1, -2, 0],
+    y: [0, -6, 0, 7, 0],
+    rotate: [0, -1, 0.5, -1, 0],
   }}
   transition={{
-    duration: 5.8,
+    duration: 10.5,
     repeat: Infinity,
     ease: "easeInOut",
     delay: 0.8,
   }}
-  className="absolute -right-3 top-8 z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-right-10"
+  className="absolute -right-3 top-8 z-20 rounded-xl border border-white/10 bg-[#171922]/80 px-4 py-3 shadow-xl backdrop-blur-xl md:-right-8"
 >
   <span className="font-bold text-orange-400">
-    HTML5
+    HTML
   </span>
 </motion.div>
 
 
-{/* CSS3 */}
+{/* CSS */}
 <motion.div
   animate={{
-    y: [0, 13, 0, -12, 0],
-    rotate: [0, 2, -2, 1, 0],
+    y: [0, 7, 0, -6, 0],
+    rotate: [0, 1, -1, 0.5, 0],
   }}
   transition={{
-    duration: 6.2,
+    duration: 11,
     repeat: Infinity,
     ease: "easeInOut",
     delay: 1.2,
   }}
-  className="absolute right-8 top-1/2 z-20 rounded-2xl border border-white/10 bg-[#171922]/80 px-5 py-4 shadow-xl backdrop-blur-xl md:-right-3"
+  className="absolute right-8 top-1/2 z-20 rounded-xl border border-white/10 bg-[#171922]/80 px-4 py-3 shadow-xl backdrop-blur-xl md:-right-3"
 >
   <span className="font-bold text-blue-400">
-    CSS3
+    CSS
   </span>
 </motion.div>
 

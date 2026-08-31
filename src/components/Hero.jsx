@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-16 px-5 py-20 lg:flex-row lg:gap-10 lg:px-8">
 
           {/* Left Content */}
-          <div className="w-full text-center lg:w-[45%] lg:text-left">
+          <div className="w-full text-center lg:w-[55%] lg:text-left">
 
             <p className="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-purple-400">
               Frontend Developer
@@ -64,7 +64,7 @@ const Hero = () => {
           </div>
 
           {/* Right Code Panel */}
-          <div className="w-full lg:w-[55%]">
+          <div className="w-full lg:w-[45%]">
             <CodePanel />
           </div>
 

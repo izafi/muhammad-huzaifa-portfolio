@@ -24,10 +24,6 @@ const Navbar = () => {
             className="flex items-center gap-3"
             onClick={() => setIsOpen(false)}
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-violet-500 flex items-center justify-center">
-              <span className="font-bold text-black">MH</span>
-            </div>
-
             <span className="hidden sm:block text-white font-semibold">
               Muhammad Huzaifa
             </span>
