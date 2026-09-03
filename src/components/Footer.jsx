@@ -32,7 +32,7 @@ const Footer = () => {
               className="group inline-flex items-center gap-3"
             >
               <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.06] text-cyan-400 transition-all duration-300 group-hover:border-cyan-400/40 group-hover:bg-cyan-400/10">
-                <Code2 size={19} />
+                <img src="/logo.png" alt="" />
               </div>
 
               <div>
@@ -107,13 +107,13 @@ const Footer = () => {
                 />
 
                 <span className="text-sm text-white/40 transition-colors duration-300 group-hover:text-white/70">
-                  your-email@gmail.com
+                  huzaifazafi156@gmail.com
                 </span>
               </a>
 
               {/* Phone */}
               <a
-                href="tel:+92XXXXXXXXXX"
+                href="tel:+923248808972"
                 className="group flex items-start gap-3"
               >
                 <Phone
@@ -122,7 +122,7 @@ const Footer = () => {
                 />
 
                 <span className="text-sm text-white/40 transition-colors duration-300 group-hover:text-white/70">
-                  +92 XXX XXXXXXX
+                  +92 324 8808971
                 </span>
               </a>
 

@@ -1,23 +1,30 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Technologies from './components/Technologies'
-import Contact from './components/Contact'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Technologies from "./components/Technologies";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import SmoothScroll from "./components/SmoothScroll";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Projects/>
-      <Technologies/>
-    <Contact/>
-    
-    </div>
-  )
-}
+      <SmoothScroll />
 
-export default App
+      <Navbar />
+      <Hero />
+      <About />
+      <Projects />
+      <Technologies />
+      <Contact />
+      <Footer />
+
+      <WhatsAppButton />
+    </div>
+  );
+};
+
+export default App;
