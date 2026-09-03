@@ -20,10 +20,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
 
-        {/* ================= NAVBAR ================= */}
+        {/* NAVBAR */}
         <div
           className="
             flex h-[68px] items-center justify-between
@@ -38,13 +38,13 @@ const Navbar = () => {
           "
         >
 
-          {/* ================= LOGO ================= */}
+          {/* LOGO */}
           <a
             href="#home"
             onClick={() => handleNavClick("Home")}
             className="group flex items-center gap-3"
           >
-            {/* MH Logo */}
+            {/* MH */}
             <div
               className="
                 flex h-9 w-9 items-center justify-center
@@ -61,7 +61,7 @@ const Navbar = () => {
               MH
             </div>
 
-            {/* Name */}
+            {/* NAME */}
             <div className="hidden sm:block">
               <p className="text-sm font-semibold tracking-wide text-white">
                 Muhammad Huzaifa
@@ -73,7 +73,7 @@ const Navbar = () => {
             </div>
           </a>
 
-          {/* ================= DESKTOP NAV ================= */}
+          {/* DESKTOP NAV */}
           <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => {
               const isActive = activeLink === link.name;
@@ -97,7 +97,7 @@ const Navbar = () => {
                 >
                   {link.name}
 
-                  {/* Active Indicator */}
+                  {/* ACTIVE LINE */}
                   {isActive && (
                     <motion.span
                       layoutId="nav-active"
@@ -123,7 +123,7 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* ================= DESKTOP CTA ================= */}
+          {/* DESKTOP CTA */}
           <a
             href="#contact"
             onClick={() => handleNavClick("Contact")}
@@ -155,7 +155,7 @@ const Navbar = () => {
             />
           </a>
 
-          {/* ================= MOBILE MENU BUTTON ================= */}
+          {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -178,7 +178,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* ================= MOBILE MENU ================= */}
+        {/* MOBILE MENU */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -211,6 +211,7 @@ const Navbar = () => {
             >
               <div className="flex flex-col gap-1">
 
+                {/* MOBILE LINKS */}
                 {navLinks.map((link) => {
                   const isActive = activeLink === link.name;
 
@@ -241,7 +242,7 @@ const Navbar = () => {
                   );
                 })}
 
-                {/* Mobile CTA */}
+                {/* MOBILE CTA */}
                 <a
                   href="#contact"
                   onClick={() => handleNavClick("Contact")}
@@ -272,6 +273,7 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
+
       </nav>
     </header>
   );
