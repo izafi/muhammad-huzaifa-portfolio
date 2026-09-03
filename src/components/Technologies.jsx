@@ -7,124 +7,102 @@ import {
   SiHtml5,
   SiTailwindcss,
   SiFramer,
-  SiNodedotjs,
-  SiMysql,
   SiGit,
   SiGithub,
   SiVercel,
   SiNetlify,
   SiWordpress,
   SiFigma,
-  SiPhp,
-  SiShopify,
 } from "react-icons/si";
 
 const Technologies = () => {
   // =========================
   // FIRST ROW
   // =========================
+
   const rowOne = [
-    {
-      name: "React.js",
-      icon: SiReact,
-      color: "#61DAFB",
-    },
-    {
-      name: "JavaScript",
-      icon: SiJavascript,
-      color: "#F7DF1E",
-    },
-    {
-      name: "HTML5",
-      icon: SiHtml5,
-      color: "#E34F26",
-    },
-    {
-      name: "CSS",
-      icon: Code2,
-      color: "#1572B6",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: SiTailwindcss,
-      color: "#06B6D4",
-    },
-    {
-      name: "Framer Motion",
-      icon: SiFramer,
-      color: "#0055FF",
-    },
-    {
-      name: "Node.js",
-      icon: SiNodedotjs,
-      color: "#339933",
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
-      color: "#4479A1",
-    },
-  ];
+  {
+    name: "React.js",
+    icon: SiReact,
+    color: "#61DAFB",
+  },
+  {
+    name: "JavaScript",
+    icon: SiJavascript,
+    color: "#F7DF1E",
+  },
+  {
+    name: "HTML5",
+    icon: SiHtml5,
+    color: "#E34F26",
+  },
+  {
+    name: "CSS",
+    icon: Code2,
+    color: "#1572B6",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: SiTailwindcss,
+    color: "#06B6D4",
+  },
+  {
+    name: "Framer Motion",
+    icon: SiFramer,
+    color: "#0055FF",
+  },
+];
 
   // =========================
   // SECOND ROW
   // =========================
-  const rowTwo = [
-    {
-      name: "Git",
-      icon: SiGit,
-      color: "#F05032",
-    },
-    {
-      name: "GitHub",
-      icon: SiGithub,
-      color: "#FFFFFF",
-    },
-    {
-      name: "Vercel",
-      icon: SiVercel,
-      color: "#FFFFFF",
-    },
-    {
-      name: "Netlify",
-      icon: SiNetlify,
-      color: "#00C7B7",
-    },
-    {
-      name: "WordPress",
-      icon: SiWordpress,
-      color: "#21759B",
-    },
-    {
-      name: "Figma",
-      icon: SiFigma,
-      color: "#F24E1E",
-    },
-    {
-      name: "PHP",
-      icon: SiPhp,
-      color: "#777BB4",
-    },
-    {
-      name: "Shopify",
-      icon: SiShopify,
-      color: "#96BF48",
-    },
-  ];
 
-  // Duplicate items for seamless infinite animation
+const rowTwo = [
+  {
+    name: "Git",
+    icon: SiGit,
+    color: "#F05032",
+  },
+  {
+    name: "GitHub",
+    icon: SiGithub,
+    color: "#FFFFFF",
+  },
+  {
+    name: "Vercel",
+    icon: SiVercel,
+    color: "#FFFFFF",
+  },
+  {
+    name: "Netlify",
+    icon: SiNetlify,
+    color: "#00C7B7",
+  },
+  {
+    name: "WordPress",
+    icon: SiWordpress,
+    color: "#21759B",
+  },
+  {
+    name: "Figma",
+    icon: SiFigma,
+    color: "#F24E1E",
+  },
+];
+  // Duplicate for seamless infinite animation
   const firstRow = [...rowOne, ...rowOne, ...rowOne];
   const secondRow = [...rowTwo, ...rowTwo, ...rowTwo];
 
   // =========================
   // TECHNOLOGY ITEM
   // =========================
+
   const TechItem = ({ item }) => {
     const Icon = item.icon;
 
     return (
       <div
-        className="tech-icon group/item"
+        className="tech-icon"
         style={{
           "--tech-color": item.color,
         }}
@@ -142,16 +120,18 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className="relative w-full overflow-hidden bg-[#070A0F] py-12 sm:py-16 lg:py-20"
+      className="relative w-full overflow-x-clip bg-[#070A0F] py-12 sm:py-16 lg:py-20"
     >
       {/* =========================
           BACKGROUND GLOW
       ========================= */}
+
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
       {/* =========================
           SECTION HEADER
       ========================= */}
+
       <div className="relative z-10 mx-auto mb-10 max-w-3xl px-5 text-center sm:mb-12">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400/80">
           Technologies
@@ -170,18 +150,20 @@ const Technologies = () => {
       {/* =========================
           TECH CAROUSELS
       ========================= */}
+
       <div className="relative space-y-6 sm:space-y-7">
-        {/* LEFT FADE */}
+        {/* Left fade */}
         <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 bg-gradient-to-r from-[#070A0F] to-transparent sm:w-28 lg:w-44" />
 
-        {/* RIGHT FADE */}
+        {/* Right fade */}
         <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 bg-gradient-to-l from-[#070A0F] to-transparent sm:w-28 lg:w-44" />
 
         {/* =========================
             ROW ONE
             LEFT TO RIGHT
         ========================= */}
-        <div className="tech-marquee overflow-hidden">
+
+        <div className="tech-marquee">
           <div className="tech-track tech-track-left">
             {firstRow.map((item, index) => (
               <TechItem
@@ -196,7 +178,8 @@ const Technologies = () => {
             ROW TWO
             RIGHT TO LEFT
         ========================= */}
-        <div className="tech-marquee overflow-hidden">
+
+        <div className="tech-marquee">
           <div className="tech-track tech-track-right">
             {secondRow.map((item, index) => (
               <TechItem
@@ -211,6 +194,7 @@ const Technologies = () => {
       {/* =========================
           CUSTOM CSS
       ========================= */}
+
       <style>{`
         /* =========================
            MARQUEE
@@ -218,24 +202,42 @@ const Technologies = () => {
 
         .tech-marquee {
           width: 100%;
-          overflow: hidden;
+          position: relative;
+
+          /* Important:
+             Do not use overflow-hidden here,
+             otherwise hover icons get clipped.
+          */
+          overflow: visible;
+
+          height: 110px;
+
+          display: flex;
+          align-items: center;
         }
 
         .tech-track {
           display: flex;
+
           width: max-content;
-          height:250px
+
+          height: 100%;
+
           align-items: center;
+
           gap: 18px;
+
           will-change: transform;
         }
 
-        /* First row */
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
         .tech-track-left {
           animation: techScrollLeft 28s linear infinite;
         }
 
-        /* Second row */
         .tech-track-right {
           animation: techScrollRight 32s linear infinite;
         }
@@ -272,6 +274,8 @@ const Technologies = () => {
             background 300ms ease,
             border-color 300ms ease,
             box-shadow 300ms ease;
+
+          z-index: 1;
         }
 
         /* =========================
@@ -320,6 +324,8 @@ const Technologies = () => {
               var(--tech-color) 5%,
               transparent
             );
+
+          z-index: 50;
         }
 
         /* =========================
@@ -352,7 +358,8 @@ const Technologies = () => {
           position: absolute;
 
           left: 50%;
-          bottom: -40px;
+
+          bottom: -38px;
 
           transform: translateX(-50%) translateY(5px);
 
@@ -369,9 +376,11 @@ const Technologies = () => {
           color: rgba(255, 255, 255, 0.8);
 
           font-size: 10px;
+
           font-weight: 500;
 
           opacity: 0;
+
           visibility: hidden;
 
           pointer-events: none;
@@ -379,9 +388,12 @@ const Technologies = () => {
           transition:
             opacity 200ms ease,
             transform 200ms ease;
+
+          z-index: 100;
         }
 
-        /* Show tooltip */
+        /* Tooltip show */
+
         .tech-icon:hover .tech-tooltip {
           opacity: 1;
 
@@ -419,6 +431,10 @@ const Technologies = () => {
         ========================= */
 
         @media (max-width: 640px) {
+          .tech-marquee {
+            height: 90px;
+          }
+
           .tech-track {
             gap: 12px;
           }
