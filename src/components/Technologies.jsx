@@ -224,6 +224,7 @@ const Technologies = () => {
         .tech-track {
           display: flex;
           width: max-content;
+          height:250px
           align-items: center;
           gap: 18px;
           will-change: transform;
