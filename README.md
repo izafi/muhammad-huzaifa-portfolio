@@ -351,6 +351,8 @@ public/
 ├── package-lock.json
 ├── README.md
 └── vite.config.js
+
+
 ⚙️ Installation & Setup
 1. Clone the repository
 git clone https://github.com/izafi/muhammad-huzaifa-portfolio.git
