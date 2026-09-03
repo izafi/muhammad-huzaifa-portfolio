@@ -58,7 +58,7 @@ const Navbar = () => {
                 group-hover:bg-blue-500/15
               "
             >
-              MH
+              <img src="/logo.png" alt="muhammad huzaifa logo" />
             </div>
 
             {/* NAME */}
