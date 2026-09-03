@@ -363,6 +363,7 @@ const Hero = () => {
                     px-2.5
                     py-1.5
                     font-mono
+                    cursor-pointer
                     text-[10px]
                     text-slate-400
                     transition-colors
