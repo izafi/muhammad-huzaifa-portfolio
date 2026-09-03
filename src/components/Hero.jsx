@@ -1,10 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
 
 import DotField from "./DotField";
 import CodePanel from "./CodePanel";
 
+const roles = [
+  "Frontend Developer",
+  "React.js Developer",
+  "UI/UX Enthusiast",
+];
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.14,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 26 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
 const Hero = () => {
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 2600);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-black">
 
@@ -28,7 +64,10 @@ const Hero = () => {
 
       {/* Hero Content */}
       <section className="relative z-10 flex min-h-screen items-center">
-        <div
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
           className="
             mx-auto flex w-full max-w-7xl flex-col
             items-center justify-center
@@ -50,6 +89,7 @@ const Hero = () => {
             className="
               w-full
               text-center
+              drop-shadow-[0_4px_30px_rgba(0,0,0,0.55)]
               md:max-w-3xl
               lg:w-[55%]
               lg:max-w-none
@@ -57,25 +97,9 @@ const Hero = () => {
             "
           >
 
-            {/* Role */}
-            <p
-              className="
-                mb-4
-                font-mono
-                text-xs
-                font-semibold
-                uppercase
-                tracking-[0.25em]
-                text-cyan-300
-                sm:text-sm
-                sm:tracking-[0.3em]
-              "
-            >
-              Frontend Developer
-            </p>
-
             {/* Heading */}
-            <h1
+            <motion.h1
+              variants={itemVariants}
               className="
                 text-4xl
                 font-bold
@@ -87,21 +111,64 @@ const Hero = () => {
                 xl:text-7xl
               "
             >
-              Hello, I'm{" "}
+              I'm{" "}
               <span className="text-purple-400">
                 Huzaifa
               </span>
-            </h1>
+            </motion.h1>
+
+            {/* Rotating Role */}
+            <motion.div
+              variants={itemVariants}
+              className="
+                mt-4
+                flex
+                items-center
+                justify-center
+                gap-3
+                sm:mt-5
+                lg:justify-start
+              "
+            >
+              <span className="h-px w-8 bg-cyan-300/60" />
+
+              <div className="relative h-5 overflow-hidden sm:h-6">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={roles[roleIndex]}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -14 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="
+                      block
+                      font-mono
+                      text-xs
+                      font-semibold
+                      uppercase
+                      tracking-[0.25em]
+                      text-cyan-300
+                      sm:text-sm
+                      sm:tracking-[0.3em]
+                    "
+                  >
+                    {roles[roleIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+            </motion.div>
 
             {/* Description */}
-            <p
+            <motion.p
+              variants={itemVariants}
               className="
                 mx-auto
                 mt-5
                 max-w-xl
                 text-sm
+                font-medium
                 leading-6
-                text-gray-400
+                text-gray-300
                 sm:mt-6
                 sm:text-base
                 sm:leading-7
@@ -116,10 +183,11 @@ const Hero = () => {
               turning designs and ideas into functional digital
               experiences using React.js, JavaScript, Tailwind CSS,
               and modern web technologies.
-            </p>
+            </motion.p>
 
             {/* Buttons */}
-            <div
+            <motion.div
+              variants={itemVariants}
               className="
                 mt-7
                 flex
@@ -208,11 +276,14 @@ const Hero = () => {
                 Contact Me
               </button>
 
-            </div>
+            </motion.div>
           </div>
 
           {/* Code Panel */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="
               hidden
               lg:block
@@ -221,9 +292,9 @@ const Hero = () => {
             "
           >
             <CodePanel />
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </section>
     </div>
   );

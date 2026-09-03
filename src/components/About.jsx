@@ -7,7 +7,22 @@ import {
   Download,
   Calendar,
   MapPin,
+  ChevronRight,
 } from "lucide-react";
+
+import {
+  SiReact,
+  SiJavascript,
+  SiTailwindcss,
+  SiHtml5,
+  SiCss,
+  SiFramer,
+  SiGit,
+  SiGithub,
+  SiVercel,
+  SiNetlify,
+  SiWordpress,
+} from "react-icons/si";
 
 import BorderGlow from "./BorderGlow";
 
@@ -33,17 +48,24 @@ const About = () => {
   ];
 
   const skills = [
-    { name: "React.js", level: "Advanced" },
-    { name: "JavaScript", level: "Advanced" },
-    { name: "Tailwind CSS", level: "Advanced" },
-    { name: "HTML5", level: "Advanced" },
-    { name: "CSS3", level: "Advanced" },
-    { name: "Framer Motion", level: "Intermediate" },
-    { name: "Git", level: "Intermediate" },
-    { name: "GitHub", level: "Intermediate" },
-    { name: "Vercel", level: "Intermediate" },
-    { name: "Netlify", level: "Intermediate" },
-    { name: "WordPress", level: "Intermediate" },
+    { name: "React.js", level: "Advanced", icon: SiReact, color: "#61DAFB" },
+    { name: "JavaScript", level: "Advanced", icon: SiJavascript, color: "#F7DF1E" },
+    { name: "Tailwind CSS", level: "Advanced", icon: SiTailwindcss, color: "#38BDF8" },
+    { name: "HTML5", level: "Advanced", icon: SiHtml5, color: "#E34F26" },
+    { name: "CSS3", level: "Advanced", icon: SiCss, color: "#1572B6" },
+    { name: "Framer Motion", level: "Intermediate", icon: SiFramer, color: "#C084FC" },
+    { name: "Git", level: "Intermediate", icon: SiGit, color: "#F05032" },
+    { name: "GitHub", level: "Intermediate", icon: SiGithub, color: "#E5E7EB" },
+    { name: "Vercel", level: "Intermediate", icon: SiVercel, color: "#FFFFFF" },
+    { name: "Netlify", level: "Intermediate", icon: SiNetlify, color: "#00C7B7" },
+    { name: "WordPress", level: "Intermediate", icon: SiWordpress, color: "#4285F4" },
+  ];
+
+  const whatIDo = [
+    "Responsive Websites",
+    "React Applications",
+    "Landing Pages",
+    "UI/UX Implementation",
   ];
 
   const tabContent = {
@@ -55,111 +77,88 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.35 }}
-        className="space-y-5"
       >
-        {/* Education Card */}
-        <div
-          className="
-            group rounded-2xl
-            border border-white/10
-            bg-white/[0.03]
-            p-6
-            cursor-pointer
-            transition-all duration-300
-            hover:border-purple-500/40
-            hover:bg-white/[0.05]
-          "
+        {/* Log entry: degree */}
+        <BorderGlow
+          edgeSensitivity={30}
+          glowColor="40 80 80"
+          backgroundColor="#0A090D"
+          borderRadius={20}
+          glowRadius={45}
+          glowIntensity={1}
+          coneSpread={25}
+          animated={false}
+          colors={["#22d3ee", "#a855f7", "#38bdf8"]}
         >
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+          <div className="relative p-6 sm:p-7">
+            {/* Left rail marker */}
             <div className="flex gap-4">
-              {/* Icon */}
-              <div
-                className="
-                  flex h-12 w-12 shrink-0
-                  items-center justify-center
-                  rounded-xl
-                  border border-purple-500/20
-                  bg-purple-500/10
-                  
-                  text-purple-400
-                "
-              >
-                <GraduationCap size={24} />
+              <div className="flex flex-col items-center">
+                <div
+                  className="
+                    flex h-11 w-11 shrink-0
+                    items-center justify-center
+                    rounded-full
+                    border border-cyan-400/30
+                    bg-cyan-400/10
+                    text-cyan-300
+                  "
+                >
+                  <GraduationCap size={20} />
+                </div>
+                <span className="mt-2 h-full w-px bg-gradient-to-b from-cyan-400/30 to-transparent" />
               </div>
 
-              {/* Content */}
-              <div>
-                <h3 className="text-lg font-semibold text-white">
-                  BS Software Engineering
-                </h3>
+              <div className="flex-1 pb-1">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">
+                      BS Software Engineering
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-400">
+                      University of Sargodha
+                    </p>
+                  </div>
 
-                <p className="mt-1 text-sm text-gray-400">
-                  University of Sargodha
-                </p>
+                  <span className="flex items-center gap-2 text-xs font-medium text-emerald-300">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                    </span>
+                    In Progress
+                  </span>
+                </div>
 
-                <div className="mt-3 flex flex-wrap gap-4 text-xs text-gray-500">
+                <div className="mt-3 flex flex-wrap gap-4 font-mono text-xs text-gray-500">
                   <span className="flex items-center gap-1.5">
-                    <Calendar size={14} />
+                    <Calendar size={13} />
                     2024 — 2028
                   </span>
-
                   <span className="flex items-center gap-1.5">
-                    <MapPin size={14} />
+                    <MapPin size={13} />
                     Sargodha, Pakistan
                   </span>
                 </div>
+
+                <p className="mt-4 text-sm leading-6 text-gray-400 sm:max-w-md">
+                  Building a strong foundation in programming, software
+                  development, databases, algorithms, and modern web
+                  technologies.
+                </p>
               </div>
             </div>
-
-            {/* Status */}
-            <span
-              className="
-                w-fit rounded-full
-                border border-cyan-400/20
-                bg-cyan-400/10
-                px-3 py-1
-                text-xs font-medium
-                text-cyan-300
-              "
-            >
-              In Progress
-            </span>
           </div>
+        </BorderGlow>
 
-          <p
-            className="
-              mt-5 border-t
-              border-white/10
-              pt-5
-              text-sm leading-6
-              text-gray-400
-            "
-          >
-            Currently pursuing a Bachelor's degree in Software Engineering,
-            building a strong foundation in programming, software development,
-            databases, algorithms, and modern web technologies.
+        {/* Quiet footnote, not another card */}
+        <div className="mt-6 border-l-2 border-purple-500/30 pl-5">
+          <p className="text-sm font-semibold text-white">
+            Continuous learning
           </p>
-        </div>
-
-        {/* Learning Card */}
-        <div
-          className="
-            rounded-2xl
-            border border-white/10
-            bg-white/[0.03]
-            cursor-pointer
-            p-6
-          "
-        >
-          <h3 className="text-base font-semibold text-white">
-            Continuous Learning
-          </h3>
-
-          <p className="mt-2 text-sm leading-6 text-gray-400">
-            I continuously improve my frontend development skills by building
-            real-world projects and exploring modern React.js patterns,
-            responsive design, animations, performance optimization, and
-            better user experiences.
+          <p className="mt-1.5 text-sm leading-6 text-gray-400">
+            Alongside formal study, I sharpen my frontend skills by building
+            real-world projects — exploring modern React.js patterns,
+            responsive design, animation, and performance.
           </p>
         </div>
       </motion.div>
@@ -173,136 +172,103 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.35 }}
-        className="space-y-5"
       >
-        {/* Experience Card */}
-        <div
-          className="
-            group rounded-2xl
-            border border-white/10
-            bg-white/[0.03]
-            p-6
-            cursor-pointer
-            transition-all duration-300
-            hover:border-purple-500/40
-            hover:bg-white/[0.05]
-          "
+        {/* Log entry: role */}
+        <BorderGlow
+          edgeSensitivity={30}
+          glowColor="40 80 80"
+          backgroundColor="#0A090D"
+          borderRadius={20}
+          glowRadius={45}
+          glowIntensity={1}
+          coneSpread={25}
+          animated={false}
+          colors={["#a855f7", "#f472b6", "#38bdf8"]}
         >
-          <div className="flex gap-4">
-            {/* Icon */}
-            <div
-              className="
-                flex h-12 w-12 shrink-0
-                items-center justify-center
-                rounded-xl
-                border border-cyan-500/20
-                bg-cyan-500/10
-                text-cyan-300
-              "
-            >
-              <Briefcase size={23} />
-            </div>
-
-            {/* Content */}
-            <div className="flex-1">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold text-white">
-                    Frontend Developer
-                  </h3>
-
-                  <p className="mt-1 text-sm text-gray-400">
-                    Freelance / Personal Projects
-                  </p>
-                </div>
-
-                <span
+          <div className="p-6 sm:p-7">
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div
                   className="
-                    flex w-fit items-center
-                    gap-1.5 rounded-full
-                    border border-purple-400/20
+                    flex h-11 w-11 shrink-0
+                    items-center justify-center
+                    rounded-full
+                    border border-purple-400/30
                     bg-purple-400/10
-                    px-3 py-1
-                    text-xs text-purple-300
+                    text-purple-300
                   "
                 >
-                  <Calendar size={13} />
-                  Present
-                </span>
+                  <Briefcase size={20} />
+                </div>
+                <span className="mt-2 h-full w-px bg-gradient-to-b from-purple-400/30 to-transparent" />
               </div>
 
-              <p className="mt-5 text-sm leading-6 text-gray-400">
-                Building modern, responsive, and interactive websites using
-                React.js, JavaScript, Tailwind CSS, and Framer Motion. I focus
-                on clean UI, reusable components, responsive layouts, smooth
-                animations, and excellent user experience.
-              </p>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">
+                      Frontend Developer
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-400">
+                      Freelance / Personal Projects
+                    </p>
+                  </div>
 
-              {/* Technologies */}
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  "React.js",
-                  "JavaScript",
-                  "Tailwind CSS",
-                  "Framer Motion",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="
-                      rounded-full
-                      border border-white/10
-                      bg-white/5
-                      px-3 py-1
-                      text-xs text-gray-300
-                    "
-                  >
-                    {tech}
+                  <span className="flex items-center gap-2 text-xs font-medium text-emerald-300">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                    </span>
+                    Present
                   </span>
-                ))}
+                </div>
+
+                <p className="mt-4 text-sm leading-6 text-gray-400 sm:max-w-md">
+                  Building modern, responsive, and interactive websites with
+                  React.js, JavaScript, Tailwind CSS, and Framer Motion —
+                  focused on clean UI, reusable components, and smooth
+                  user experience.
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {["React.js", "JavaScript", "Tailwind CSS", "Framer Motion"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="
+                          rounded-md
+                          border border-white/10
+                          bg-white/5
+                          px-2.5 py-1
+                          font-mono
+                          text-[11px]
+                          text-gray-300
+                        "
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </BorderGlow>
 
-        {/* What I Do */}
-        <div
-          className="
-            rounded-2xl
-            border border-white/10
-            bg-white/[0.03]
-            p-6
-          "
-        >
-          <h3 className="text-base font-semibold text-white">
-            What I Do
-          </h3>
-
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {[
-              "Responsive Websites",
-              "React Applications",
-              "Landing Pages",
-              "UI/UX Implementation",
-            ].map((item) => (
-              <div
+        {/* Capabilities, styled in the developer's own vocabulary */}
+        <div className="mt-6 border-l-2 border-cyan-400/30 pl-5">
+          <p className="text-sm font-semibold text-white">What I do</p>
+          <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
+            {whatIDo.map((item) => (
+              <li
                 key={item}
-                className="
-                  rounded-xl
-                  border border-white/10
-                  bg-black/20
-                  p-3
-                  cursor-pointer
-                  text-sm text-gray-400
-                  transition-all duration-300
-                  hover:border-purple-500/30
-                  hover:text-gray-300
-                "
+                className="flex items-center gap-2 text-sm text-gray-400"
               >
-                <span className="mr-2 text-purple-400">✦</span>
+                <ChevronRight size={14} className="shrink-0 text-purple-400" />
                 {item}
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </motion.div>
     ),
@@ -358,14 +324,15 @@ const About = () => {
                     flex h-11 w-11
                     items-center justify-center
                     rounded-xl
-                    bg-purple-500/10
-                    text-purple-400
                     transition-all duration-300
                     group-hover:scale-110
-                    group-hover:bg-purple-500/20
                   "
+                  style={{
+                    backgroundColor: `${skill.color}1A`,
+                    color: skill.color,
+                  }}
                 >
-                  <Code2 size={21} />
+                  <skill.icon size={21} />
                 </div>
 
                 {/* Skill Name */}
