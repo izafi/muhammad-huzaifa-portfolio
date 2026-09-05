@@ -18,74 +18,35 @@ const Projects = () => {
         "A modern and responsive gym website built with React.js, Tailwind CSS and Framer Motion. Interactive filtering, animated sections and testimonials.",
       tech: ["React.js", "Tailwind CSS", "Framer Motion"],
       live: "https://coders-gym-coral.vercel.app/",
-      github: "https://github.com/",
+      github: "https://github.com/izafi/coders-gym",
       featured: true,
       number: "01",
     },
 
     {
       id: 2,
-      title: "StoreHub",
+      title: "Shopify",
       category: "E-Commerce",
       description:
         "A modern ecommerce frontend with product API integration, responsive product cards, category browsing and smooth React Router navigation.",
       tech: ["React.js", "JavaScript", "Tailwind CSS", "API"],
-      live: "#",
-      github: "https://github.com/",
+      live: "https://shopify-ecommerce-store.vercel.app/",
+      github: "https://github.com/izafi/shopify-ecommerce-store",
       featured: true,
       number: "02",
     },
 
     {
       id: 3,
-      title: "CV Maker",
-      category: "Web Application",
+      title: "Portfolio",
+      category: "Personal Portfolio",
       description:
-        "A responsive CV builder that allows users to create professional resumes using reusable templates with a clean interface.",
-      tech: ["JavaScript", "HTML", "CSS"],
-      live: "#",
-      github: "https://github.com/",
-      featured: false,
+        "A modern and responsive personal portfolio website designed to showcase skills, projects, experience, and professional achievements with a clean and engaging interface.",
+      tech: ["React.js", "JavaScript", "Tailwind CSS"],
+      live: "https://muhammad-huzaifa-portfolio-sage.vercel.app/",
+      github: "https://github.com/izafi/muhammad-huzaifa-portfolio",
+      featured: true,
       number: "03",
-    },
-
-    {
-      id: 4,
-      title: "Apple iPhone 3D",
-      category: "Interactive Website",
-      description:
-        "A visually engaging Apple-inspired product experience with modern layouts, interactive sections and smooth animations.",
-      tech: ["React.js", "Framer Motion", "Tailwind CSS"],
-      live: "#",
-      github: "https://github.com/",
-      featured: false,
-      number: "04",
-    },
-
-    {
-      id: 5,
-      title: "EAI Brainwave",
-      category: "Landing Page",
-      description:
-        "A futuristic AI landing page with strong visual hierarchy, modern typography and responsive sections.",
-      tech: ["React.js", "Tailwind CSS", "Framer Motion"],
-      live: "#",
-      github: "https://github.com/",
-      featured: false,
-      number: "05",
-    },
-
-    {
-      id: 6,
-      title: "VR Landing Page",
-      category: "Landing Page",
-      description:
-        "A modern virtual reality landing page with a responsive layout, bold visuals and engaging animations.",
-      tech: ["React.js", "Tailwind CSS"],
-      live: "#",
-      github: "https://github.com/",
-      featured: false,
-      number: "06",
     },
   ];
 
