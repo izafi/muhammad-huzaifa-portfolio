@@ -298,6 +298,7 @@ Primary Blue     #4388D4
 Bright Cyan      #51CCFF
 Main Background  #08090C
 Dark Navy        #0C1727
+
 Design Principles
 Minimal dark interface
 Electric blue accents
@@ -333,6 +334,7 @@ Hover effects
 Button interactions
 Smooth entrance animations
 Interactive UI elements
+
 🌌 Animated Background
 
 The website uses animated background effects to create depth while maintaining a minimal and professional appearance.
@@ -342,6 +344,7 @@ The website uses animated background effects to create depth while maintaining a
 The portfolio is optimized for different screen sizes.
 
 Supported Devices
+
 🖥️ Desktop
 💻 Laptop
 📲 Tablet
@@ -376,6 +379,7 @@ UI implementation
 Frontend development
 WordPress development
 Collaboration opportunities
+
 Contact Includes
 📧 Email
 📱 Phone
@@ -397,6 +401,7 @@ This makes it easier for potential clients and collaborators to contact me.
 The portfolio includes a dedicated SmoothScroll.jsx component for smooth navigation between different sections.
 
 Navigation Sections
+
 Home
 About
 Projects
@@ -448,7 +453,9 @@ muhammad-huzaifa-portfolio/
 ├── package-lock.json
 ├── README.md
 └── vite.config.js
+
 ⚙️ Installation & Setup
+
 1. Clone the Repository
 git clone https://github.com/izafi/muhammad-huzaifa-portfolio.git
 2. Navigate to the Project
@@ -469,6 +476,7 @@ npm run build
 Preview the production build locally:
 
 npm run preview
+
 🚀 Deployment
 
 The project can be deployed using:
@@ -502,21 +510,10 @@ Website Development
 Performance Optimization
 Freelance Web Developer
 WordPress Developer
-📸 Preview
 
-You can add screenshots of the portfolio inside a screenshots folder.
 
-screenshots/
-│
-├── hero.png
-├── about.png
-├── projects.png
-├── technologies.png
-├── contact.png
-└── footer.png
-Example
-![Portfolio Hero](screenshots/hero.png)
 📬 Connect With Me
+
 Muhammad Huzaifa
 
 Frontend Developer | React.js Developer
@@ -580,6 +577,7 @@ This project is created for personal portfolio and showcase purposes.
 © 2026 Muhammad Huzaifa. All Rights Reserved.
 
 🚀 Built With
+
 React.js
 Tailwind CSS
 JavaScript
@@ -589,6 +587,7 @@ Vite
 Git
 GitHub
 Vercel
+
 💙 Thanks for Visiting!
 
 If you're looking for a Frontend Developer to build a modern, responsive, and interactive website, feel free to connect with me.
