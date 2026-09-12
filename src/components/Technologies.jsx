@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Code2 } from "lucide-react";
 
 import {
@@ -21,74 +22,75 @@ const Technologies = () => {
   // =========================
 
   const rowOne = [
-  {
-    name: "React.js",
-    icon: SiReact,
-    color: "#61DAFB",
-  },
-  {
-    name: "JavaScript",
-    icon: SiJavascript,
-    color: "#F7DF1E",
-  },
-  {
-    name: "HTML5",
-    icon: SiHtml5,
-    color: "#E34F26",
-  },
-  {
-    name: "CSS",
-    icon: Code2,
-    color: "#1572B6",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: SiTailwindcss,
-    color: "#06B6D4",
-  },
-  {
-    name: "Framer Motion",
-    icon: SiFramer,
-    color: "#0055FF",
-  },
-];
+    {
+      name: "React.js",
+      icon: SiReact,
+      color: "#61DAFB",
+    },
+    {
+      name: "JavaScript",
+      icon: SiJavascript,
+      color: "#F7DF1E",
+    },
+    {
+      name: "HTML5",
+      icon: SiHtml5,
+      color: "#E34F26",
+    },
+    {
+      name: "CSS",
+      icon: Code2,
+      color: "#1572B6",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: SiTailwindcss,
+      color: "#06B6D4",
+    },
+    {
+      name: "Framer Motion",
+      icon: SiFramer,
+      color: "#0055FF",
+    },
+  ];
 
   // =========================
   // SECOND ROW
   // =========================
 
-const rowTwo = [
-  {
-    name: "Git",
-    icon: SiGit,
-    color: "#F05032",
-  },
-  {
-    name: "GitHub",
-    icon: SiGithub,
-    color: "#FFFFFF",
-  },
-  {
-    name: "Vercel",
-    icon: SiVercel,
-    color: "#FFFFFF",
-  },
-  {
-    name: "Netlify",
-    icon: SiNetlify,
-    color: "#00C7B7",
-  },
-  {
-    name: "WordPress",
-    icon: SiWordpress,
-    color: "#21759B",
-  },
-  {
-    name: "Figma",
-    icon: SiFigma,
-    color: "#F24E1E",
-  },
-];
+  const rowTwo = [
+    {
+      name: "Git",
+      icon: SiGit,
+      color: "#F05032",
+    },
+    {
+      name: "GitHub",
+      icon: SiGithub,
+      color: "#FFFFFF",
+    },
+    {
+      name: "Vercel",
+      icon: SiVercel,
+      color: "#FFFFFF",
+    },
+    {
+      name: "Netlify",
+      icon: SiNetlify,
+      color: "#00C7B7",
+    },
+    {
+      name: "WordPress",
+      icon: SiWordpress,
+      color: "#21759B",
+    },
+    {
+      name: "Figma",
+      icon: SiFigma,
+      color: "#F24E1E",
+    },
+  ];
+
   // Duplicate for seamless infinite animation
   const firstRow = [...rowOne, ...rowOne, ...rowOne];
   const secondRow = [...rowTwo, ...rowTwo, ...rowTwo];
@@ -110,9 +112,7 @@ const rowTwo = [
         <Icon className="tech-icon-svg" />
 
         {/* Tooltip */}
-        <span className="tech-tooltip">
-          {item.name}
-        </span>
+        <span className="tech-tooltip">{item.name}</span>
       </div>
     );
   };
@@ -120,7 +120,7 @@ const rowTwo = [
   return (
     <section
       id="technologies"
-      className="relative w-full overflow-x-clip bg-[#070A0F] py-12 sm:py-16 lg:py-20"
+      className="relative w-full overflow-x-clip bg-[#070A0F] py-7 sm:py-9 lg:py-12"
     >
       {/* =========================
           BACKGROUND GLOW
@@ -132,7 +132,7 @@ const rowTwo = [
           SECTION HEADER
       ========================= */}
 
-      <div className="relative z-10 mx-auto mb-10 max-w-3xl px-5 text-center sm:mb-12">
+      <div className="relative z-10 mx-auto mb-8 max-w-3xl px-5 text-center sm:mb-10">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400/80">
           Technologies
         </p>
@@ -141,7 +141,7 @@ const rowTwo = [
           Tech Stack
         </h2>
 
-        <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-white/45 sm:text-base">
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-white/45 sm:mt-4 sm:text-base">
           Tools I use to build modern, responsive, and interactive digital
           experiences.
         </p>
@@ -151,7 +151,7 @@ const rowTwo = [
           TECH CAROUSELS
       ========================= */}
 
-      <div className="relative space-y-6 sm:space-y-7">
+      <div className="relative space-y-5 sm:space-y-6">
         {/* Left fade */}
         <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 bg-gradient-to-r from-[#070A0F] to-transparent sm:w-28 lg:w-44" />
 
@@ -204,13 +204,13 @@ const rowTwo = [
           width: 100%;
           position: relative;
 
-          /* Important:
-             Do not use overflow-hidden here,
-             otherwise hover icons get clipped.
+          /*
+            Do not use overflow-hidden here,
+            otherwise hover icons get clipped.
           */
-          overflow: visible;
 
-          height: 110px;
+          overflow: visible;
+          height: 100px;
 
           display: flex;
           align-items: center;
@@ -218,13 +218,9 @@ const rowTwo = [
 
         .tech-track {
           display: flex;
-
           width: max-content;
-
           height: 100%;
-
           align-items: center;
-
           gap: 18px;
 
           will-change: transform;
@@ -261,11 +257,9 @@ const rowTwo = [
           cursor: pointer;
 
           border: 1px solid rgba(255, 255, 255, 0.06);
-
           border-radius: 16px;
 
           background: rgba(255, 255, 255, 0.025);
-
           color: rgba(255, 255, 255, 0.22);
 
           transition:
@@ -287,7 +281,6 @@ const rowTwo = [
           height: 30px;
 
           filter: grayscale(1);
-
           opacity: 0.55;
 
           transition:
@@ -358,7 +351,6 @@ const rowTwo = [
           position: absolute;
 
           left: 50%;
-
           bottom: -38px;
 
           transform: translateX(-50%) translateY(5px);
@@ -368,7 +360,6 @@ const rowTwo = [
           padding: 6px 9px;
 
           border: 1px solid rgba(255, 255, 255, 0.08);
-
           border-radius: 7px;
 
           background: #0B0E13;
@@ -376,11 +367,9 @@ const rowTwo = [
           color: rgba(255, 255, 255, 0.8);
 
           font-size: 10px;
-
           font-weight: 500;
 
           opacity: 0;
-
           visibility: hidden;
 
           pointer-events: none;
@@ -396,7 +385,6 @@ const rowTwo = [
 
         .tech-icon:hover .tech-tooltip {
           opacity: 1;
-
           visibility: visible;
 
           transform: translateX(-50%) translateY(0);
@@ -432,7 +420,7 @@ const rowTwo = [
 
         @media (max-width: 640px) {
           .tech-marquee {
-            height: 90px;
+            height: 82px;
           }
 
           .tech-track {
@@ -442,7 +430,6 @@ const rowTwo = [
           .tech-icon {
             width: 58px;
             height: 58px;
-
             border-radius: 13px;
           }
 
