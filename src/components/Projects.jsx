@@ -28,8 +28,8 @@ const Projects = () => {
       title: "Property Web",
       category: "Property",
       description:
-        "A modern ecommerce frontend with product API integration, responsive product cards, category browsing and smooth React Router navigation.",
-      tech: ["React.js", "JavaScript", "Tailwind CSS", "API"],
+        "A modern real estate website built with React.js and Tailwind CSS, featuring responsive layouts, smooth animations, animated statistics, project showcases, testimonials, and an engaging user experience.",
+      tech: ["React.js", "JavaScript", "Tailwind CSS"],
       image: "/projects/property-web.png",
       live: "https://property-web-orpin.vercel.app/",
       github: "https://github.com/izafi/property-web",
