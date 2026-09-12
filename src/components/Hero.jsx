@@ -85,6 +85,7 @@ const Hero = () => {
       </div>
 
       {/* Subtle background glow */}
+
       <div
         className="
           pointer-events-none
@@ -129,18 +130,18 @@ const Hero = () => {
             flex-col
             items-center
             justify-center
-            gap-12
+            gap-8
             px-5
-            pb-16
-            pt-32
+            pb-8
+            pt-20
             sm:px-6
-            sm:pb-20
-            sm:pt-36
-            md:gap-14
+            sm:pb-10
+            sm:pt-24
+            md:gap-10
             md:px-8
             lg:flex-row
             lg:justify-between
-            lg:gap-12
+            lg:gap-10
             lg:px-8
             xl:px-10
           "
@@ -214,7 +215,7 @@ const Hero = () => {
             <motion.h1
               variants={itemVariants}
               className="
-                mt-6
+                mt-5
                 text-4xl
                 font-bold
                 leading-[1.08]
@@ -222,7 +223,7 @@ const Hero = () => {
                 text-white
                 sm:text-5xl
                 md:text-6xl
-                lg:mt-7
+                lg:mt-6
                 lg:text-6xl
                 xl:text-7xl
               "
@@ -255,7 +256,7 @@ const Hero = () => {
             <motion.div
               variants={itemVariants}
               className="
-                mt-6
+                mt-5
                 flex
                 items-center
                 justify-center
@@ -316,7 +317,7 @@ const Hero = () => {
               variants={itemVariants}
               className="
                 mx-auto
-                mt-6
+                mt-5
                 max-w-xl
                 text-sm
                 leading-7
@@ -338,7 +339,7 @@ const Hero = () => {
             <motion.div
               variants={itemVariants}
               className="
-                mt-6
+                mt-5
                 flex
                 flex-wrap
                 items-center
@@ -356,6 +357,7 @@ const Hero = () => {
                 <span
                   key={tech}
                   className="
+                    cursor-pointer
                     rounded-md
                     border
                     border-white/[0.08]
@@ -363,7 +365,6 @@ const Hero = () => {
                     px-2.5
                     py-1.5
                     font-mono
-                    cursor-pointer
                     text-[10px]
                     text-slate-400
                     transition-colors
@@ -383,7 +384,7 @@ const Hero = () => {
             <motion.div
               variants={itemVariants}
               className="
-                mt-8
+                mt-7
                 flex
                 flex-col
                 items-center
@@ -481,7 +482,7 @@ const Hero = () => {
             <motion.div
               variants={itemVariants}
               className="
-                mt-8
+                mt-7
                 flex
                 items-center
                 justify-center
@@ -489,25 +490,26 @@ const Hero = () => {
                 lg:justify-start
               "
             >
-             <a
-  href="https://github.com/izafi"
-  target="_blank"
-  rel="noreferrer"
-  className="
-    flex
-    items-center
-    gap-2
-    font-mono
-    text-xs
-    text-slate-500
-    transition-colors
-    duration-300
-    hover:text-white
-  "
->
-  <FaGithub size={15} />
-  GitHub
-</a>
+              <a
+                href="https://github.com/izafi"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  font-mono
+                  text-xs
+                  text-slate-500
+                  transition-colors
+                  duration-300
+                  hover:text-white
+                "
+              >
+                <FaGithub size={15} />
+                GitHub
+              </a>
+
               <span className="h-3 w-px bg-white/10" />
 
               <span
@@ -521,7 +523,6 @@ const Hero = () => {
                 "
               >
                 <Terminal size={14} />
-
                 clean.code
               </span>
             </motion.div>
@@ -552,7 +553,6 @@ const Hero = () => {
             "
           >
             <div className="relative">
-
               {/* Small label */}
 
               <div
