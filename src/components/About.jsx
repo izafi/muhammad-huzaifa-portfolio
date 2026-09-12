@@ -30,6 +30,10 @@ import {
 
 import BorderGlow from "../components/BorderGlow";
 
+/* =========================
+   TABS
+========================= */
+
 const tabs = [
   {
     id: "education",
@@ -52,6 +56,10 @@ const tabs = [
     icon: Wrench,
   },
 ];
+
+/* =========================
+   SKILLS
+========================= */
 
 const skills = [
   {
@@ -91,6 +99,10 @@ const skills = [
     icon: SiGit,
   },
 ];
+
+/* =========================
+   TOOLS
+========================= */
 
 const tools = [
   {
@@ -155,6 +167,10 @@ const tools = [
   },
 ];
 
+/* =========================
+   ANIMATION
+========================= */
+
 const contentVariants = {
   hidden: {
     opacity: 0,
@@ -179,6 +195,10 @@ const contentVariants = {
   },
 };
 
+/* =========================
+   GLOW PROPS
+========================= */
+
 const glowProps = {
   edgeSensitivity: 25,
   glowColor: "200 90 65",
@@ -192,6 +212,10 @@ const glowProps = {
   fillOpacity: 0.25,
 };
 
+/* =========================
+   ABOUT
+========================= */
+
 const About = () => {
   const [activeTab, setActiveTab] = useState("education");
 
@@ -202,27 +226,44 @@ const About = () => {
         relative
         overflow-hidden
         bg-[#08090B]
-        px-5
-        py-24
+        px-4
+        py-16
         text-white
+
         sm:px-6
-        sm:py-28
-        lg:px-8
-        lg:py-32
+        sm:py-20
+
+        md:px-8
+        md:py-24
+
+        lg:py-28
+
+        xl:py-32
       "
     >
-      {/* Background Glow */}
+      {/* =========================
+          BACKGROUND GLOW
+      ========================== */}
+
       <div
         className="
           pointer-events-none
           absolute
           left-0
           top-1/4
-          h-[350px]
-          w-[350px]
+          h-[220px]
+          w-[220px]
           rounded-full
           bg-blue-500/[0.05]
-          blur-[130px]
+          blur-[100px]
+
+          sm:h-[280px]
+          sm:w-[280px]
+
+          md:h-[350px]
+          md:w-[350px]
+
+          md:blur-[130px]
         "
       />
 
@@ -232,16 +273,35 @@ const About = () => {
           absolute
           bottom-0
           right-0
-          h-[300px]
-          w-[300px]
+          h-[200px]
+          w-[200px]
           rounded-full
           bg-cyan-400/[0.04]
-          blur-[120px]
+          blur-[90px]
+
+          sm:h-[250px]
+          sm:w-[250px]
+
+          md:h-[300px]
+          md:w-[300px]
+
+          md:blur-[120px]
         "
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      {/* =========================
+          CONTAINER
+      ========================== */}
 
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-7xl
+        "
+      >
         {/* =========================
             SECTION HEADING
         ========================== */}
@@ -251,12 +311,19 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center"
+          className="
+            mb-8
+            text-center
+
+            sm:mb-10
+
+            md:mb-12
+          "
         >
           <div
             className="
               mx-auto
-              mb-4
+              mb-3
               flex
               w-fit
               items-center
@@ -268,10 +335,14 @@ const About = () => {
               px-3
               py-1.5
               font-mono
-              text-[10px]
+              text-[9px]
               uppercase
-              tracking-[0.2em]
+              tracking-[0.18em]
               text-blue-300
+
+              sm:mb-4
+              sm:text-[10px]
+              sm:tracking-[0.2em]
             "
           >
             <Code2 size={13} />
@@ -281,12 +352,17 @@ const About = () => {
 
           <h2
             className="
-              text-3xl
+              text-2xl
               font-bold
+              leading-tight
               tracking-tight
               text-white
-              sm:text-4xl
-              md:text-5xl
+
+              sm:text-3xl
+
+              md:text-4xl
+
+              lg:text-5xl
             "
           >
             Building with{" "}
@@ -306,12 +382,19 @@ const About = () => {
           <p
             className="
               mx-auto
-              mt-4
-              max-w-2xl
-              text-sm
-              leading-7
+              mt-3
+              max-w-xl
+              px-2
+              text-xs
+              leading-6
               text-slate-400
-              sm:text-base
+
+              sm:mt-4
+              sm:px-0
+              sm:text-sm
+              sm:leading-7
+
+              md:text-base
             "
           >
             I'm a Frontend Developer and Software Engineering student
@@ -324,8 +407,21 @@ const About = () => {
             MAIN GRID
         ========================== */}
 
-        <div className="grid gap-8 lg:grid-cols-[280px_1fr] lg:gap-10">
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-6
 
+            md:gap-8
+
+            lg:grid-cols-[250px_minmax(0,1fr)]
+            lg:gap-8
+
+            xl:grid-cols-[280px_minmax(0,1fr)]
+            xl:gap-10
+          "
+        >
           {/* =========================
               LEFT PROFILE
           ========================== */}
@@ -335,6 +431,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
+            className="w-full"
           >
             <BorderGlow
               {...glowProps}
@@ -344,7 +441,13 @@ const About = () => {
                 className="
                   rounded-[17px]
                   bg-[#0B0E13]
-                  p-5
+                  p-4
+
+                  sm:p-5
+
+                  md:p-6
+
+                  lg:p-5
                 "
               >
                 {/* Avatar */}
@@ -354,8 +457,8 @@ const About = () => {
                     relative
                     mx-auto
                     flex
-                    h-28
-                    w-28
+                    h-24
+                    w-24
                     items-center
                     justify-center
                     overflow-hidden
@@ -363,8 +466,18 @@ const About = () => {
                     border
                     border-blue-400/20
                     bg-blue-500/[0.08]
-                    sm:h-32
-                    sm:w-32
+
+                    sm:h-28
+                    sm:w-28
+
+                    md:h-32
+                    md:w-32
+
+                    lg:h-28
+                    lg:w-28
+
+                    xl:h-32
+                    xl:w-32
                   "
                 >
                   <div
@@ -378,40 +491,80 @@ const About = () => {
                     "
                   />
 
-                  <img src="/muhammad huzaifa.png" alt="" />
+                  <img
+                    src="/muhammad huzaifa.png"
+                    alt="Muhammad Huzaifa"
+                    className="
+                      relative
+                      h-full
+                      w-full
+                      object-cover
+                    "
+                  />
                 </div>
 
-                <div className="mt-5 text-center">
-                  <h3 className="text-lg font-semibold text-white">
+                <div className="mt-4 text-center sm:mt-5">
+                  <h3
+                    className="
+                      text-base
+                      font-semibold
+                      text-white
+
+                      sm:text-lg
+                    "
+                  >
                     Muhammad Huzaifa
                   </h3>
 
-                  <p className="mt-1 font-mono text-xs text-cyan-400">
+                  <p className="mt-1 font-mono text-[11px] text-cyan-400 sm:text-xs">
                     Frontend Developer
                   </p>
                 </div>
 
                 <div
                   className="
-                    mt-5
+                    mt-4
                     flex
                     items-center
                     justify-center
                     gap-2
-                    text-xs
+                    text-[11px]
                     text-slate-500
+
+                    sm:mt-5
+                    sm:text-xs
                   "
                 >
                   <MapPin
                     size={14}
-                    className="text-blue-400"
+                    className="shrink-0 text-blue-400"
                   />
 
                   Pakistan
                 </div>
 
-                <div className="mt-6 border-t border-white/[0.07] pt-5">
-                  <p className="text-center text-xs leading-6 text-slate-500">
+                <div
+                  className="
+                    mt-5
+                    border-t
+                    border-white/[0.07]
+                    pt-4
+
+                    sm:mt-6
+                    sm:pt-5
+                  "
+                >
+                  <p
+                    className="
+                      text-center
+                      text-[11px]
+                      leading-5
+                      text-slate-500
+
+                      sm:text-xs
+                      sm:leading-6
+                    "
+                  >
                     Focused on building clean UI, scalable React
                     applications, responsive websites, and engaging
                     digital experiences.
@@ -423,7 +576,7 @@ const About = () => {
                   download
                   className="
                     group
-                    mt-6
+                    mt-5
                     flex
                     w-full
                     items-center
@@ -431,18 +584,23 @@ const About = () => {
                     gap-2
                     rounded-lg
                     bg-blue-500
-                    px-4
-                    py-3
-                    text-sm
+                    px-3
+                    py-2.5
+                    text-xs
                     font-semibold
                     text-white
                     transition-all
                     duration-300
                     hover:-translate-y-0.5
                     hover:bg-blue-600
+
+                    sm:mt-6
+                    sm:px-4
+                    sm:py-3
+                    sm:text-sm
                   "
                 >
-                  <Download size={16} />
+                  <Download size={15} />
 
                   Download Resume
                 </a>
@@ -459,25 +617,39 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="
+              min-w-0
+              w-full
+            "
           >
-
             {/* =========================
                 TABS
             ========================== */}
 
             <div
               className="
-                mb-8
+                mb-5
+                w-full
                 overflow-x-auto
                 rounded-xl
                 border
                 border-white/[0.08]
                 bg-white/[0.025]
-                p-1.5
+                p-1
+
+                sm:mb-6
+                sm:p-1.5
+
+                md:mb-8
               "
             >
-              <div className="flex min-w-max gap-1">
-
+              <div
+                className="
+                  flex
+                  min-w-max
+                  gap-1
+                "
+              >
                 {tabs.map((tab) => {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
@@ -485,21 +657,30 @@ const About = () => {
                   return (
                     <button
                       key={tab.id}
+                      type="button"
                       onClick={() => setActiveTab(tab.id)}
                       className={`
                         relative
                         flex
+                        shrink-0
                         items-center
-                        gap-2
+                        gap-1.5
                         rounded-lg
-                        px-3
-                        py-2.5
-                        text-xs
+                        px-2.5
+                        py-2
+                        text-[10px]
                         font-medium
                         transition-all
                         duration-300
-                        sm:px-4
-                        sm:text-sm
+
+                        sm:gap-2
+                        sm:px-3
+                        sm:py-2.5
+                        sm:text-xs
+
+                        md:px-4
+                        md:text-sm
+
                         ${
                           isActive
                             ? "text-white"
@@ -522,10 +703,14 @@ const About = () => {
                       )}
 
                       <Icon
-                        size={15}
+                        size={14}
                         className={`
                           relative
                           z-10
+                          shrink-0
+
+                          sm:size-[15px]
+
                           ${
                             isActive
                               ? "text-cyan-400"
@@ -534,13 +719,12 @@ const About = () => {
                         `}
                       />
 
-                      <span className="relative cursor-pointer z-10">
+                      <span className="relative z-10 whitespace-nowrap">
                         {tab.label}
                       </span>
                     </button>
                   );
                 })}
-
               </div>
             </div>
 
@@ -548,8 +732,7 @@ const About = () => {
                 TAB CONTENT
             ========================== */}
 
-            <div className="min-h-[430px]">
-
+            <div className="min-h-0 w-full">
               <AnimatePresence mode="wait">
 
                 {/* =====================
@@ -563,6 +746,7 @@ const About = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
+                    className="w-full"
                   >
                     <BorderGlow
                       {...glowProps}
@@ -573,30 +757,34 @@ const About = () => {
                         className="
                           rounded-[17px]
                           bg-[#0B0E13]
-                          p-6
-                          sm:p-8
+                          p-4
+
+                          sm:p-6
+
+                          md:p-7
+
+                          lg:p-8
                         "
                       >
-
                         <div
                           className="
                             flex
                             flex-col
-                            gap-5
-                            sm:flex-row
-                            sm:items-start
-                            sm:justify-between
+                            gap-4
+
+                            sm:gap-5
+                            md:flex-row
+                            md:items-start
+                            md:justify-between
                           "
                         >
-
-                          <div>
-
+                          <div className="min-w-0">
                             <div
                               className="
-                                mb-4
+                                mb-3
                                 flex
-                                h-11
-                                w-11
+                                h-10
+                                w-10
                                 items-center
                                 justify-center
                                 rounded-xl
@@ -604,71 +792,93 @@ const About = () => {
                                 border-blue-400/20
                                 bg-blue-500/10
                                 text-blue-300
+
+                                sm:mb-4
+                                sm:h-11
+                                sm:w-11
                               "
                             >
-                              <GraduationCap size={22} />
+                              <GraduationCap size={21} />
                             </div>
 
                             <h3
                               className="
-                                text-xl
+                                text-lg
                                 font-semibold
+                                leading-tight
                                 text-white
-                                sm:text-2xl
+
+                                sm:text-xl
+
+                                md:text-2xl
                               "
                             >
                               BS Software Engineering
                             </h3>
 
-                            <p className="mt-2 text-sm font-medium text-cyan-400">
+                            <p className="mt-2 text-xs font-medium text-cyan-400 sm:text-sm">
                               University of Sargodha
                             </p>
-
                           </div>
 
                           <div
                             className="
                               flex
                               w-fit
+                              shrink-0
                               items-center
                               gap-2
                               rounded-md
                               border
                               border-white/[0.08]
                               bg-white/[0.03]
-                              px-3
+                              px-2.5
                               py-1.5
                               font-mono
-                              text-xs
+                              text-[10px]
                               text-slate-400
+
+                              sm:px-3
+                              sm:text-xs
                             "
                           >
-                            <Calendar size={13} />
+                            <Calendar size={12} />
 
                             2024 — 2028
                           </div>
-
                         </div>
 
-                        <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                        <div
+                          className="
+                            mt-5
+                            grid
+                            grid-cols-1
+                            gap-3
 
+                            sm:mt-7
+                            sm:grid-cols-2
+                            sm:gap-4
+                          "
+                        >
                           <div
                             className="
                               rounded-xl
                               border
                               border-white/[0.07]
                               bg-black/20
-                              p-4
+                              p-3.5
+
+                              sm:p-4
                             "
                           >
-                            <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-600">
+                            <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-600 sm:text-[10px]">
                               Location
                             </p>
 
-                            <p className="mt-2 flex items-center gap-2 text-sm text-slate-300">
+                            <p className="mt-2 flex items-center gap-2 text-xs text-slate-300 sm:text-sm">
                               <MapPin
                                 size={14}
-                                className="text-blue-400"
+                                className="shrink-0 text-blue-400"
                               />
 
                               Sargodha, Pakistan
@@ -681,26 +891,40 @@ const About = () => {
                               border
                               border-white/[0.07]
                               bg-black/20
-                              p-4
+                              p-3.5
+
+                              sm:p-4
                             "
                           >
-                            <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-600">
+                            <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-600 sm:text-[10px]">
                               Status
                             </p>
 
-                            <p className="mt-2 flex items-center gap-2 text-sm text-slate-300">
+                            <p className="mt-2 flex items-center gap-2 text-xs text-slate-300 sm:text-sm">
                               <CheckCircle2
                                 size={14}
-                                className="text-cyan-400"
+                                className="shrink-0 text-cyan-400"
                               />
 
                               Currently Studying
                             </p>
                           </div>
-
                         </div>
 
-                        <p className="mt-7 text-sm leading-7 text-slate-400 sm:text-base">
+                        <p
+                          className="
+                            mt-5
+                            text-xs
+                            leading-6
+                            text-slate-400
+
+                            sm:mt-7
+                            sm:text-sm
+                            sm:leading-7
+
+                            md:text-base
+                          "
+                        >
                           Currently pursuing a Bachelor's degree in
                           Software Engineering with a strong interest in
                           frontend development, software architecture,
@@ -708,14 +932,22 @@ const About = () => {
                           technologies.
                         </p>
 
-                        <div className="mt-7 border-t border-white/[0.07] pt-6">
+                        <div
+                          className="
+                            mt-5
+                            border-t
+                            border-white/[0.07]
+                            pt-5
 
-                          <p className="font-mono text-xs uppercase tracking-wider text-slate-600">
+                            sm:mt-7
+                            sm:pt-6
+                          "
+                        >
+                          <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600 sm:text-xs">
                             Current Focus
                           </p>
 
-                          <div className="mt-4 flex flex-wrap gap-2">
-
+                          <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
                             {[
                               "React.js",
                               "JavaScript",
@@ -730,20 +962,20 @@ const About = () => {
                                   border
                                   border-blue-400/10
                                   bg-blue-500/[0.05]
-                                  px-3
+                                  px-2.5
                                   py-1.5
-                                  text-xs
+                                  text-[10px]
                                   text-slate-400
+
+                                  sm:px-3
+                                  sm:text-xs
                                 "
                               >
                                 {item}
                               </span>
                             ))}
-
                           </div>
-
                         </div>
-
                       </div>
                     </BorderGlow>
                   </motion.div>
@@ -760,6 +992,7 @@ const About = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
+                    className="w-full"
                   >
                     <BorderGlow
                       {...glowProps}
@@ -770,18 +1003,29 @@ const About = () => {
                         className="
                           rounded-[17px]
                           bg-[#0B0E13]
-                          p-6
-                          sm:p-8
+                          p-4
+
+                          sm:p-6
+
+                          md:p-7
+
+                          lg:p-8
                         "
                       >
+                        <div
+                          className="
+                            flex
+                            items-start
+                            gap-3
 
-                        <div className="flex items-start gap-4">
-
+                            sm:gap-4
+                          "
+                        >
                           <div
                             className="
                               flex
-                              h-11
-                              w-11
+                              h-10
+                              w-10
                               shrink-0
                               items-center
                               justify-center
@@ -790,33 +1034,43 @@ const About = () => {
                               border-cyan-400/20
                               bg-cyan-400/10
                               text-cyan-300
+
+                              sm:h-11
+                              sm:w-11
                             "
                           >
-                            <BriefcaseBusiness size={21} />
+                            <BriefcaseBusiness size={20} />
                           </div>
 
-                          <div className="flex-1">
-
+                          <div className="min-w-0 flex-1">
                             <div
                               className="
                                 flex
                                 flex-col
                                 justify-between
-                                gap-2
-                                sm:flex-row
+                                gap-3
+
+                                sm:gap-2
+
+                                md:flex-row
                               "
                             >
+                              <div className="min-w-0">
+                                <h3
+                                  className="
+                                    text-lg
+                                    font-semibold
+                                    text-white
 
-                              <div>
-
-                                <h3 className="text-xl font-semibold text-white">
+                                    sm:text-xl
+                                  "
+                                >
                                   Frontend Developer
                                 </h3>
 
-                                <p className="mt-1 text-sm text-cyan-400">
+                                <p className="mt-1 text-xs text-cyan-400 sm:text-sm">
                                   Freelance & Personal Projects
                                 </p>
-
                               </div>
 
                               <span
@@ -824,41 +1078,72 @@ const About = () => {
                                   flex
                                   h-fit
                                   w-fit
+                                  shrink-0
                                   items-center
                                   gap-2
                                   rounded-md
                                   border
                                   border-white/[0.08]
                                   bg-white/[0.03]
-                                  px-3
+                                  px-2.5
                                   py-1.5
                                   font-mono
-                                  text-xs
+                                  text-[10px]
                                   text-slate-500
+
+                                  sm:px-3
+                                  sm:text-xs
                                 "
                               >
-                                <Calendar size={13} />
+                                <Calendar size={12} />
 
                                 Present
                               </span>
-
                             </div>
-
                           </div>
-
                         </div>
 
-                        <div className="mt-7 border-t border-white/[0.07] pt-6">
+                        <div
+                          className="
+                            mt-5
+                            border-t
+                            border-white/[0.07]
+                            pt-5
 
-                          <p className="text-sm leading-7 text-slate-400 sm:text-base">
+                            sm:mt-7
+                            sm:pt-6
+                          "
+                        >
+                          <p
+                            className="
+                              text-xs
+                              leading-6
+                              text-slate-400
+
+                              sm:text-sm
+                              sm:leading-7
+
+                              md:text-base
+                            "
+                          >
                             Developing modern and responsive websites and
                             web applications with a strong focus on clean
                             UI, reusable components, performance, and user
                             experience.
                           </p>
 
-                          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                          <div
+                            className="
+                              mt-5
+                              grid
+                              grid-cols-1
+                              gap-2.5
 
+                              sm:mt-7
+                              sm:grid-cols-2
+                              sm:gap-3
+                            "
+                          >
                             {[
                               "Responsive Websites",
                               "React Applications",
@@ -872,36 +1157,37 @@ const About = () => {
                                 className="
                                   flex
                                   items-center
-                                  gap-3
+                                  gap-2.5
                                   rounded-lg
                                   border
                                   border-white/[0.07]
                                   bg-black/20
-                                  px-4
-                                  py-3
+                                  px-3
+                                  py-2.5
+
+                                  sm:gap-3
+                                  sm:px-4
+                                  sm:py-3
                                 "
                               >
                                 <CheckCircle2
-                                  size={15}
+                                  size={14}
                                   className="shrink-0 text-blue-400"
                                 />
 
-                                <span className="text-sm text-slate-300">
+                                <span className="text-xs text-slate-300 sm:text-sm">
                                   {item}
                                 </span>
                               </div>
                             ))}
-
                           </div>
 
-                          <div className="mt-7">
-
-                            <p className="font-mono text-xs uppercase tracking-wider text-slate-600">
+                          <div className="mt-5 sm:mt-7">
+                            <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600 sm:text-xs">
                               Technologies Used
                             </p>
 
-                            <div className="mt-4 flex flex-wrap gap-2">
-
+                            <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
                               {[
                                 "React.js",
                                 "JavaScript",
@@ -917,23 +1203,22 @@ const About = () => {
                                     border
                                     border-cyan-400/10
                                     bg-cyan-400/[0.04]
-                                    px-3
+                                    px-2.5
                                     py-1.5
                                     font-mono
-                                    text-[11px]
+                                    text-[10px]
                                     text-slate-400
+
+                                    sm:px-3
+                                    sm:text-[11px]
                                   "
                                 >
                                   {tech}
                                 </span>
                               ))}
-
                             </div>
-
                           </div>
-
                         </div>
-
                       </div>
                     </BorderGlow>
                   </motion.div>
@@ -951,9 +1236,16 @@ const About = () => {
                     animate="visible"
                     exit="exit"
                   >
+                    <div
+                      className="
+                        grid
+                        grid-cols-1
+                        gap-3
 
-                    <div className="grid gap-4 sm:grid-cols-2">
-
+                        sm:grid-cols-2
+                        sm:gap-4
+                      "
+                    >
                       {skills.map((skill) => {
                         const Icon = skill.icon;
 
@@ -975,55 +1267,53 @@ const About = () => {
                               className="
                                 rounded-[15px]
                                 bg-[#0B0E13]
-                                p-5
+                                p-4
+
+                                sm:p-5
                               "
                             >
-
-                              <div className="flex items-center justify-between">
-
-                                <div className="flex items-center gap-3">
-
+                              <div className="flex items-center justify-between gap-3">
+                                <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
                                   <div
                                     className="
                                       flex
-                                      h-10
-                                      w-10
+                                      h-9
+                                      w-9
+                                      shrink-0
                                       items-center
                                       justify-center
                                       rounded-lg
                                       border
                                       border-blue-400/10
                                       bg-blue-500/[0.06]
+
+                                      sm:h-10
+                                      sm:w-10
                                     "
                                   >
                                     <Icon
-                                      size={19}
+                                      size={18}
                                       className="text-blue-400"
                                     />
                                   </div>
 
-                                  <div>
-
-                                    <h4 className="text-sm font-medium text-white">
+                                  <div className="min-w-0">
+                                    <h4 className="truncate text-xs font-medium text-white sm:text-sm">
                                       {skill.name}
                                     </h4>
 
-                                    <p className="mt-0.5 text-[10px] text-slate-600">
+                                    <p className="mt-0.5 text-[9px] text-slate-600 sm:text-[10px]">
                                       {skill.level}
                                     </p>
-
                                   </div>
-
                                 </div>
 
-                                <span className="font-mono text-xs text-slate-500">
+                                <span className="shrink-0 font-mono text-[10px] text-slate-500 sm:text-xs">
                                   {skill.percentage}%
                                 </span>
-
                               </div>
 
-                              <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
-
+                              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/[0.06] sm:mt-4">
                                 <motion.div
                                   initial={{ width: 0 }}
                                   whileInView={{
@@ -1042,14 +1332,11 @@ const About = () => {
                                     to-cyan-400
                                   "
                                 />
-
                               </div>
-
                             </div>
                           </BorderGlow>
                         );
                       })}
-
                     </div>
 
                     <BorderGlow
@@ -1057,22 +1344,22 @@ const About = () => {
                       glowRadius={25}
                       borderRadius={16}
                       glowIntensity={0.55}
-                      className="mt-5 w-full"
+                      className="mt-4 w-full sm:mt-5"
                     >
                       <div
                         className="
                           rounded-[15px]
                           bg-[#0B0E13]
-                          p-5
+                          p-4
+
+                          sm:p-5
                         "
                       >
-
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-slate-600">
+                        <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600 sm:text-[10px]">
                           Also Familiar With
                         </p>
 
-                        <div className="mt-4 flex flex-wrap gap-2">
-
+                        <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
                           {[
                             "REST APIs",
                             "JSON",
@@ -1088,21 +1375,21 @@ const About = () => {
                                 border
                                 border-white/[0.07]
                                 bg-black/20
-                                px-3
+                                px-2.5
                                 py-1.5
-                                text-xs
+                                text-[10px]
                                 text-slate-400
+
+                                sm:px-3
+                                sm:text-xs
                               "
                             >
                               {item}
                             </span>
                           ))}
-
                         </div>
-
                       </div>
                     </BorderGlow>
-
                   </motion.div>
                 )}
 
@@ -1118,9 +1405,20 @@ const About = () => {
                     animate="visible"
                     exit="exit"
                   >
+                    <div
+                      className="
+                        grid
+                        grid-cols-1
+                        gap-2.5
 
-                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        sm:grid-cols-2
+                        sm:gap-3
 
+                        md:grid-cols-2
+
+                        lg:grid-cols-3
+                      "
+                    >
                       {tools.map((tool) => {
                         const Icon = tool.icon;
 
@@ -1138,18 +1436,20 @@ const About = () => {
                                 group
                                 flex
                                 items-center
-                                gap-3
+                                gap-2.5
                                 rounded-[14px]
                                 bg-[#0B0E13]
-                                p-4
+                                p-3.5
+
+                                sm:gap-3
+                                sm:p-4
                               "
                             >
-
                               <div
                                 className="
                                   flex
-                                  h-10
-                                  w-10
+                                  h-9
+                                  w-9
                                   shrink-0
                                   items-center
                                   justify-center
@@ -1162,28 +1462,27 @@ const About = () => {
                                   duration-300
                                   group-hover:border-blue-400/20
                                   group-hover:text-blue-400
+
+                                  sm:h-10
+                                  sm:w-10
                                 "
                               >
-                                <Icon size={19} />
+                                <Icon size={18} />
                               </div>
 
                               <div className="min-w-0">
-
-                                <p className="truncate text-sm font-medium text-slate-200">
+                                <p className="truncate text-xs font-medium text-slate-200 sm:text-sm">
                                   {tool.name}
                                 </p>
 
-                                <p className="mt-0.5 text-[10px] uppercase tracking-wider text-slate-600">
+                                <p className="mt-0.5 truncate text-[9px] uppercase tracking-wider text-slate-600 sm:text-[10px]">
                                   {tool.category}
                                 </p>
-
                               </div>
-
                             </div>
                           </BorderGlow>
                         );
                       })}
-
                     </div>
 
                     <BorderGlow
@@ -1191,59 +1490,57 @@ const About = () => {
                       glowRadius={25}
                       borderRadius={16}
                       glowIntensity={0.55}
-                      className="mt-5 w-full"
+                      className="mt-4 w-full sm:mt-5"
                     >
                       <div
                         className="
                           flex
-                          items-center
+                          items-start
                           gap-3
                           rounded-[15px]
                           bg-[#0B0E13]
-                          p-5
+                          p-4
+
+                          sm:p-5
                         "
                       >
-
                         <div
                           className="
                             flex
-                            h-10
-                            w-10
+                            h-9
+                            w-9
                             shrink-0
                             items-center
                             justify-center
                             rounded-lg
                             bg-blue-500/10
                             text-blue-400
+
+                            sm:h-10
+                            sm:w-10
                           "
                         >
-                          <Code2 size={19} />
+                          <Code2 size={18} />
                         </div>
 
-                        <div>
-
-                          <p className="text-sm font-medium text-white">
+                        <div className="min-w-0">
+                          <p className="text-xs font-medium text-white sm:text-sm">
                             Always learning
                           </p>
 
-                          <p className="mt-1 text-xs leading-5 text-slate-500">
+                          <p className="mt-1 text-[10px] leading-5 text-slate-500 sm:text-xs">
                             Exploring new technologies and improving my
                             development workflow every day.
                           </p>
-
                         </div>
-
                       </div>
                     </BorderGlow>
-
                   </motion.div>
                 )}
 
               </AnimatePresence>
-
             </div>
           </motion.div>
-
         </div>
 
         {/* =========================
@@ -1255,7 +1552,13 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-12"
+          className="
+            mt-8
+
+            sm:mt-10
+
+            md:mt-12
+          "
         >
           <BorderGlow
             {...glowProps}
@@ -1275,29 +1578,55 @@ const About = () => {
                 flex-col
                 items-center
                 justify-between
-                gap-5
+                gap-4
                 rounded-[17px]
                 bg-[#0B0E13]
-                p-6
-                sm:flex-row
-                sm:p-7
+                p-4
+                text-center
+
+                sm:p-6
+
+                md:flex-row
+                md:gap-5
+                md:p-7
+                md:text-left
               "
             >
+              <div className="min-w-0">
+                <p
+                  className="
+                    font-mono
+                    text-[9px]
+                    uppercase
+                    tracking-[0.16em]
+                    text-blue-400
 
-              <div>
-
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-blue-400">
+                    sm:text-[10px]
+                    sm:tracking-[0.18em]
+                  "
+                >
                   Let's build something
                 </p>
 
-                <h3 className="mt-2 text-lg font-semibold text-white sm:text-xl">
+                <h3
+                  className="
+                    mt-1.5
+                    text-base
+                    font-semibold
+                    text-white
+
+                    sm:mt-2
+                    sm:text-lg
+
+                    md:text-xl
+                  "
+                >
                   Have a project in mind?
                 </h3>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-xs text-slate-500 sm:text-sm">
                   Let's turn your idea into a modern web experience.
                 </p>
-
               </div>
 
               <a
@@ -1305,16 +1634,18 @@ const About = () => {
                 className="
                   group
                   flex
+                  w-full
                   shrink-0
                   items-center
+                  justify-center
                   gap-2
                   rounded-lg
                   border
                   border-blue-400/20
                   bg-blue-500/10
-                  px-5
-                  py-3
-                  text-sm
+                  px-4
+                  py-2.5
+                  text-xs
                   font-semibold
                   text-blue-300
                   transition-all
@@ -1322,12 +1653,17 @@ const About = () => {
                   hover:border-blue-400/40
                   hover:bg-blue-500/15
                   hover:text-blue-200
+
+                  sm:w-fit
+                  sm:px-5
+                  sm:py-3
+                  sm:text-sm
                 "
               >
                 Let's Talk
 
                 <ExternalLink
-                  size={15}
+                  size={14}
                   className="
                     transition-transform
                     duration-300
@@ -1336,11 +1672,9 @@ const About = () => {
                   "
                 />
               </a>
-
             </div>
           </BorderGlow>
         </motion.div>
-
       </div>
     </section>
   );

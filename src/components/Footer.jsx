@@ -160,15 +160,6 @@ const Footer = () => {
             © {new Date().getFullYear()} Muhammad Huzaifa. All rights
             reserved.
           </p>
-
-          <p className="flex items-center gap-1.5 text-xs text-white/30">
-            Built with
-            <Heart
-              size={12}
-              className="fill-current text-cyan-400"
-            />
-            using React.js
-          </p>
         </div>
       </div>
     </footer>
