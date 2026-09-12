@@ -26,14 +26,14 @@ const Projects = () => {
 
     {
       id: 2,
-      title: "Shopify",
-      category: "E-Commerce",
+      title: "Property Web",
+      category: "property",
       description:
         "A modern ecommerce frontend with product API integration, responsive product cards, category browsing and smooth React Router navigation.",
       tech: ["React.js", "JavaScript", "Tailwind CSS", "API"],
       image: "/projects/property-web.png",
-      live: "https://shopify-ecommerce-store.vercel.app/",
-      github: "https://github.com/izafi/shopify-ecommerce-store",
+      live: "https://property-web-orpin.vercel.app/",
+      github: "https://github.com/izafi/property-web",
       featured: true,
       number: "02",
     },
