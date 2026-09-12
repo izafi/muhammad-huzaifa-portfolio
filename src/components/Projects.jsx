@@ -23,11 +23,10 @@ const Projects = () => {
       featured: true,
       number: "01",
     },
-
     {
       id: 2,
       title: "Property Web",
-      category: "property",
+      category: "Property",
       description:
         "A modern ecommerce frontend with product API integration, responsive product cards, category browsing and smooth React Router navigation.",
       tech: ["React.js", "JavaScript", "Tailwind CSS", "API"],
@@ -37,7 +36,6 @@ const Projects = () => {
       featured: true,
       number: "02",
     },
-
     {
       id: 3,
       title: "Portfolio",
@@ -70,28 +68,45 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative bg-[#080A0D] text-white py-20 sm:py-24 lg:py-28 overflow-hidden"
+      className="
+        relative
+        bg-[#080A0D]
+        text-white
+        py-10
+        sm:py-12
+        md:py-14
+        lg:py-16
+        overflow-hidden
+      "
     >
       {/* ================= BACKGROUND ================= */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-600/5 blur-[120px] rounded-full" />
-
         <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-cyan-500/5 blur-[120px] rounded-full" />
       </div>
 
       {/* ================= CONTAINER ================= */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+      <div
+        className="
+          relative
+          max-w-7xl
+          mx-auto
+          px-3
+          sm:px-4
+          md:px-6
+          lg:px-8
+        "
+      >
         {/* ================= HEADER ================= */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-10 sm:mb-14"
+          className="max-w-3xl mb-7 sm:mb-9 md:mb-10"
         >
           {/* Small Heading */}
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-3">
             <span className="w-8 h-px bg-cyan-400" />
 
             <span className="text-cyan-400 text-xs sm:text-sm font-medium tracking-[0.2em] uppercase">
@@ -109,7 +124,7 @@ const Projects = () => {
           </h2>
 
           {/* Description */}
-          <p className="mt-4 sm:mt-5 text-sm text-white/55 leading-6 max-w-2xl">
+          <p className="mt-3 sm:mt-4 text-sm text-white/55 leading-6 max-w-2xl">
             A collection of frontend projects focused on modern interfaces,
             responsive layouts, smooth interactions and real-world web
             development.
@@ -117,55 +132,53 @@ const Projects = () => {
         </motion.div>
 
         {/* ================= PROJECT GRID ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-7">
-
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            xl:grid-cols-3
+            gap-5
+            md:gap-6
+            lg:gap-7
+          "
+        >
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-
-              /* ================= CARD ENTRY ANIMATION ================= */
+              // ================= CARD ENTRY ANIMATION =================
               initial={{
                 opacity: 0,
                 y: 30,
               }}
-
               whileInView={{
                 opacity: 1,
                 y: 0,
               }}
-
               viewport={{
                 once: true,
                 amount: 0.1,
               }}
-
               transition={{
                 duration: 0.5,
                 delay: index * 0.06,
               }}
-
-              /* ================= HOVER ANIMATION ================= */
+              // ================= HOVER ANIMATION =================
               whileHover={{
                 y: -12,
                 scale: 1.025,
                 rotateX: 2,
                 rotateY: -2,
               }}
-
               whileTap={{
                 scale: 0.98,
               }}
-
               style={{
                 transformPerspective: 1000,
               }}
-
               className="h-full"
             >
-              <BorderGlow
-                {...glowProps}
-                className="h-full"
-              >
+              <BorderGlow {...glowProps} className="h-full">
                 <article
                   className="
                     group
@@ -178,7 +191,6 @@ const Projects = () => {
                     duration-500
                   "
                 >
-
                   {/* ================= PROJECT PREVIEW ================= */}
                   <div
                     className="
@@ -196,8 +208,7 @@ const Projects = () => {
                       group-hover:border-cyan-400/30
                     "
                   >
-
-                    {/* ================= GRID BACKGROUND ================= */}
+                    {/* GRID BACKGROUND */}
                     <div
                       className="
                         absolute
@@ -211,7 +222,7 @@ const Projects = () => {
                       }}
                     />
 
-                    {/* ================= GLOW ================= */}
+                    {/* GLOW */}
                     <div
                       className="
                         absolute
@@ -231,7 +242,7 @@ const Projects = () => {
                       "
                     />
 
-                    {/* ================= ACTUAL PROJECT IMAGE ================= */}
+                    {/* ACTUAL PROJECT IMAGE */}
                     <div
                       className="
                         absolute
@@ -264,7 +275,7 @@ const Projects = () => {
                         "
                       />
 
-                      {/* ================= IMAGE OVERLAY ================= */}
+                      {/* IMAGE OVERLAY */}
                       <div
                         className="
                           absolute
@@ -276,7 +287,7 @@ const Projects = () => {
                         "
                       />
 
-                      {/* ================= COLOR OVERLAY ================= */}
+                      {/* COLOR OVERLAY */}
                       <div
                         className="
                           absolute
@@ -288,7 +299,7 @@ const Projects = () => {
                         "
                       />
 
-                      {/* ================= SHINE EFFECT ================= */}
+                      {/* SHINE EFFECT */}
                       <div
                         className="
                           absolute
@@ -308,7 +319,7 @@ const Projects = () => {
                       />
                     </div>
 
-                    {/* ================= PROJECT NUMBER ================= */}
+                    {/* PROJECT NUMBER */}
                     <div
                       className="
                         absolute
@@ -326,7 +337,7 @@ const Projects = () => {
                       {project.number}
                     </div>
 
-                    {/* ================= CATEGORY ================= */}
+                    {/* CATEGORY */}
                     <div className="absolute bottom-2.5 left-3">
                       <span
                         className="
@@ -353,11 +364,9 @@ const Projects = () => {
                   </div>
 
                   {/* ================= PROJECT CONTENT ================= */}
-                  <div className="pt-5 sm:pt-6 flex flex-col flex-1">
-
-                    {/* ================= TITLE ================= */}
+                  <div className="pt-4 sm:pt-5 flex flex-col flex-1">
+                    {/* TITLE */}
                     <div className="flex items-start justify-between gap-3">
-
                       <h3
                         className="
                           text-lg
@@ -372,7 +381,7 @@ const Projects = () => {
                         {project.title}
                       </h3>
 
-                      {/* ================= FEATURED BADGE ================= */}
+                      {/* FEATURED BADGE */}
                       {project.featured && (
                         <span
                           className="
@@ -398,10 +407,10 @@ const Projects = () => {
                       )}
                     </div>
 
-                    {/* ================= DESCRIPTION ================= */}
+                    {/* DESCRIPTION */}
                     <p
                       className="
-                        mt-3
+                        mt-2.5
                         text-xs
                         sm:text-[13px]
                         leading-5.5
@@ -415,9 +424,8 @@ const Projects = () => {
                       {project.description}
                     </p>
 
-                    {/* ================= TECH STACK ================= */}
-                    <div className="flex flex-wrap gap-2 mt-5">
-
+                    {/* TECH STACK */}
+                    <div className="flex flex-wrap gap-2 mt-4">
                       {project.tech.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
@@ -440,23 +448,21 @@ const Projects = () => {
                           {tech}
                         </span>
                       ))}
-
                     </div>
 
-                    {/* ================= BUTTONS ================= */}
+                    {/* BUTTONS */}
                     <div
                       className="
                         flex
                         items-center
                         gap-2.5
-                        mt-6
-                        pt-5
+                        mt-5
+                        pt-4
                         border-t
                         border-white/[0.06]
                       "
                     >
-
-                      {/* ================= LIVE DEMO ================= */}
+                      {/* LIVE DEMO */}
                       <a
                         href={project.live}
                         target="_blank"
@@ -493,7 +499,7 @@ const Projects = () => {
                         />
                       </a>
 
-                      {/* ================= GITHUB ================= */}
+                      {/* GITHUB */}
                       <a
                         href={project.github}
                         target="_blank"
@@ -519,11 +525,10 @@ const Projects = () => {
                         "
                       >
                         <Code2 size={13} />
-
                         GitHub
                       </a>
 
-                      {/* ================= ARROW ================= */}
+                      {/* ARROW */}
                       <div
                         className="
                           ml-auto
@@ -547,15 +552,12 @@ const Projects = () => {
                       >
                         <ArrowUpRight size={15} />
                       </div>
-
                     </div>
                   </div>
-
                 </article>
               </BorderGlow>
             </motion.div>
           ))}
-
         </div>
 
         {/* ================= BOTTOM CTA ================= */}
@@ -574,10 +576,9 @@ const Projects = () => {
           transition={{
             duration: 0.6,
           }}
-          className="mt-10 sm:mt-12"
+          className="mt-7 sm:mt-8 md:mt-9"
         >
           <BorderGlow {...glowProps}>
-
             <div
               className="
                 flex
@@ -586,16 +587,14 @@ const Projects = () => {
                 items-start
                 sm:items-center
                 justify-between
-                gap-6
-                p-5
-                sm:p-6
-                lg:p-7
+                gap-5
+                p-4
+                sm:p-5
+                lg:p-6
               "
             >
-
-              {/* ================= CTA CONTENT ================= */}
+              {/* CTA CONTENT */}
               <div>
-
                 <div
                   className="
                     flex
@@ -605,11 +604,10 @@ const Projects = () => {
                     text-xs
                     uppercase
                     tracking-wider
-                    mb-2.5
+                    mb-2
                   "
                 >
                   <Code2 size={14} />
-
                   More Projects
                 </div>
 
@@ -620,10 +618,9 @@ const Projects = () => {
                 <p className="mt-1.5 text-sm text-white/45">
                   Check out my GitHub for more experiments and projects.
                 </p>
-
               </div>
 
-              {/* ================= CTA BUTTON ================= */}
+              {/* CTA BUTTON */}
               <a
                 href="https://github.com/izafi"
                 target="_blank"
@@ -655,12 +652,9 @@ const Projects = () => {
                   className="transition-transform duration-300 group-hover:rotate-45"
                 />
               </a>
-
             </div>
-
           </BorderGlow>
         </motion.div>
-
       </div>
     </section>
   );
