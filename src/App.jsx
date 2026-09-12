@@ -8,12 +8,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SmoothScroll from "./components/SmoothScroll";
 import WhatsAppButton from "./components/WhatsAppButton";
+import GlowCursor from "./components/GlowCursor";
 
 const App = () => {
   return (
     <div>
       <SmoothScroll />
-
+      <GlowCursor/>
       <Navbar />
       <Hero />
       <About />
