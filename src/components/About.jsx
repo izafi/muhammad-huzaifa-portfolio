@@ -621,6 +621,7 @@ const About = () => {
                         shrink-0
                         items-center
                         gap-1.5
+                        cursor-pointer
                         rounded-lg
                         px-2.5
                         py-2
