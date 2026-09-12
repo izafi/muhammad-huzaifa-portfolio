@@ -47,9 +47,7 @@ const Footer = () => {
             </a>
 
             <p className="mt-5 max-w-md text-sm leading-6 text-white/40">
-              Frontend Developer and Software Engineering student focused on
-              building modern, responsive, and interactive web experiences
-              using React.js, JavaScript, and Tailwind CSS.
+              Building modern, responsive, and user-focused web experiences with React.js, JavaScript, and modern web technologies. Always learning, creating, and turning ideas into meaningful digital experiences.
             </p>
 
             {/* Status */}
