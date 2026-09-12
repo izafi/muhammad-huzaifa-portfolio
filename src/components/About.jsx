@@ -128,16 +128,6 @@ const tools = [
     icon: SiFramer,
   },
   {
-    name: "Node.js",
-    category: "Backend",
-    icon: SiNodedotjs,
-  },
-  {
-    name: "MySQL",
-    category: "Database",
-    icon: SiMysql,
-  },
-  {
     name: "Git",
     category: "Version Control",
     icon: SiGit,
