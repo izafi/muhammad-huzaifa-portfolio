@@ -1,33 +1,26 @@
 import React, { useEffect, useRef } from "react";
 
 const GlowCursor = () => {
-  const cursorDot = useRef(null);
   const cursorGlow = useRef(null);
 
   useEffect(() => {
-    const dot = cursorDot.current;
     const glow = cursorGlow.current;
 
-    let mouseX = -100;
-    let mouseY = -100;
+    let mouseX = -300;
+    let mouseY = -300;
 
-    let glowX = -100;
-    let glowY = -100;
+    let glowX = -300;
+    let glowY = -300;
 
     const handleMouseMove = (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-
-      // Small cursor dot
-      dot.style.transform = `
-        translate3d(${mouseX}px, ${mouseY}px, 0)
-      `;
     };
 
     const animate = () => {
-      // Smooth trailing glow
-      glowX += (mouseX - glowX) * 0.10;
-      glowY += (mouseY - glowY) * 0.10;
+      // Smooth glow movement
+      glowX += (mouseX - glowX) * 0.12;
+      glowY += (mouseY - glowY) * 0.12;
 
       glow.style.transform = `
         translate3d(${glowX}px, ${glowY}px, 0)
@@ -48,71 +41,30 @@ const GlowCursor = () => {
   return (
     <>
       {/* =========================
-          CURSOR DOT
-      ========================= */}
-
-      <div
-        ref={cursorDot}
-        className="glow-cursor-dot"
-      />
-
-      {/* =========================
-          CURSOR GLOW
+          GLOW CURSOR
       ========================= */}
 
       <div
         ref={cursorGlow}
-        className="glow-cursor-glow"
+        className="glow-cursor"
       />
 
       <style>{`
         /* =========================
-           SMALL CURSOR DOT
+           GLOW CURSOR
         ========================= */
 
-        .glow-cursor-dot {
+        .glow-cursor {
           position: fixed;
 
           top: 0;
           left: 0;
 
-          width: 7px;
-          height: 7px;
+          width: 300px;
+          height: 300px;
 
-          margin-left: -3.5px;
-          margin-top: -3.5px;
-
-          border-radius: 50%;
-
-          background: #51CCFF;
-
-          box-shadow:
-            0 0 6px rgba(81, 204, 255, 0.9),
-            0 0 14px rgba(81, 204, 255, 0.75),
-            0 0 24px rgba(67, 136, 212, 0.45);
-
-          pointer-events: none;
-
-          z-index: 99999;
-
-          will-change: transform;
-        }
-
-        /* =========================
-           OUTER GLOW
-        ========================= */
-
-        .glow-cursor-glow {
-          position: fixed;
-
-          top: 0;
-          left: 0;
-
-          width: 280px;
-          height: 280px;
-
-          margin-left: -140px;
-          margin-top: -140px;
+          margin-left: -150px;
+          margin-top: -150px;
 
           border-radius: 50%;
 
@@ -123,26 +75,20 @@ const GlowCursor = () => {
           background:
             radial-gradient(
               circle,
-              rgba(81, 204, 255, 0.13) 0%,
-              rgba(67, 136, 212, 0.10) 25%,
+              rgba(81, 204, 255, 0.14) 0%,
+              rgba(67, 136, 212, 0.10) 24%,
               rgba(67, 136, 212, 0.055) 42%,
               rgba(12, 23, 39, 0.025) 58%,
               transparent 72%
             );
 
-          filter: blur(10px);
+          filter: blur(12px);
 
-          opacity: 0.95;
+          opacity: 0.9;
 
           will-change: transform;
-        }
 
-        /* =========================
-           DARK THEME BLEND
-        ========================= */
-
-        body {
-          cursor: default;
+          transition: opacity 200ms ease;
         }
 
         /* =========================
@@ -150,8 +96,7 @@ const GlowCursor = () => {
         ========================= */
 
         @media (hover: none) and (pointer: coarse) {
-          .glow-cursor-dot,
-          .glow-cursor-glow {
+          .glow-cursor {
             display: none;
           }
         }
@@ -161,7 +106,7 @@ const GlowCursor = () => {
         ========================= */
 
         @media (prefers-reduced-motion: reduce) {
-          .glow-cursor-glow {
+          .glow-cursor {
             display: none;
           }
         }
