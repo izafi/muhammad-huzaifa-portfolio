@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
+
 import {
   GraduationCap,
   BriefcaseBusiness,
@@ -227,18 +229,14 @@ const About = () => {
         overflow-hidden
         bg-[#08090B]
         px-4
-        py-16
+        py-10
         text-white
-
         sm:px-6
-        sm:py-20
-
+        sm:py-12
         md:px-8
-        md:py-24
-
-        lg:py-28
-
-        xl:py-32
+        md:py-14
+        lg:py-16
+        xl:py-20
       "
     >
       {/* =========================
@@ -256,13 +254,10 @@ const About = () => {
           rounded-full
           bg-blue-500/[0.05]
           blur-[100px]
-
           sm:h-[280px]
           sm:w-[280px]
-
           md:h-[350px]
           md:w-[350px]
-
           md:blur-[130px]
         "
       />
@@ -278,13 +273,10 @@ const About = () => {
           rounded-full
           bg-cyan-400/[0.04]
           blur-[90px]
-
           sm:h-[250px]
           sm:w-[250px]
-
           md:h-[300px]
           md:w-[300px]
-
           md:blur-[120px]
         "
       />
@@ -312,18 +304,16 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="
-            mb-8
+            mb-6
             text-center
-
-            sm:mb-10
-
-            md:mb-12
+            sm:mb-7
+            md:mb-8
           "
         >
           <div
             className="
               mx-auto
-              mb-3
+              mb-2.5
               flex
               w-fit
               items-center
@@ -339,14 +329,12 @@ const About = () => {
               uppercase
               tracking-[0.18em]
               text-blue-300
-
-              sm:mb-4
+              sm:mb-3
               sm:text-[10px]
               sm:tracking-[0.2em]
             "
           >
             <Code2 size={13} />
-
             About Me
           </div>
 
@@ -357,11 +345,8 @@ const About = () => {
               leading-tight
               tracking-tight
               text-white
-
               sm:text-3xl
-
               md:text-4xl
-
               lg:text-5xl
             "
           >
@@ -382,18 +367,16 @@ const About = () => {
           <p
             className="
               mx-auto
-              mt-3
+              mt-2.5
               max-w-xl
               px-2
               text-xs
               leading-6
               text-slate-400
-
-              sm:mt-4
+              sm:mt-3
               sm:px-0
               sm:text-sm
               sm:leading-7
-
               md:text-base
             "
           >
@@ -411,15 +394,12 @@ const About = () => {
           className="
             grid
             grid-cols-1
-            gap-6
-
-            md:gap-8
-
+            gap-5
+            md:gap-6
             lg:grid-cols-[250px_minmax(0,1fr)]
-            lg:gap-8
-
+            lg:gap-7
             xl:grid-cols-[280px_minmax(0,1fr)]
-            xl:gap-10
+            xl:gap-8
           "
         >
           {/* =========================
@@ -442,11 +422,8 @@ const About = () => {
                   rounded-[17px]
                   bg-[#0B0E13]
                   p-4
-
                   sm:p-5
-
                   md:p-6
-
                   lg:p-5
                 "
               >
@@ -466,16 +443,12 @@ const About = () => {
                     border
                     border-blue-400/20
                     bg-blue-500/[0.08]
-
                     sm:h-28
                     sm:w-28
-
                     md:h-32
                     md:w-32
-
                     lg:h-28
                     lg:w-28
-
                     xl:h-32
                     xl:w-32
                   "
@@ -509,7 +482,6 @@ const About = () => {
                       text-base
                       font-semibold
                       text-white
-
                       sm:text-lg
                     "
                   >
@@ -530,7 +502,6 @@ const About = () => {
                     gap-2
                     text-[11px]
                     text-slate-500
-
                     sm:mt-5
                     sm:text-xs
                   "
@@ -545,12 +516,11 @@ const About = () => {
 
                 <div
                   className="
-                    mt-5
+                    mt-4
                     border-t
                     border-white/[0.07]
                     pt-4
-
-                    sm:mt-6
+                    sm:mt-5
                     sm:pt-5
                   "
                 >
@@ -560,7 +530,6 @@ const About = () => {
                       text-[11px]
                       leading-5
                       text-slate-500
-
                       sm:text-xs
                       sm:leading-6
                     "
@@ -576,7 +545,7 @@ const About = () => {
                   download
                   className="
                     group
-                    mt-5
+                    mt-4
                     flex
                     w-full
                     items-center
@@ -593,15 +562,13 @@ const About = () => {
                     duration-300
                     hover:-translate-y-0.5
                     hover:bg-blue-600
-
-                    sm:mt-6
+                    sm:mt-5
                     sm:px-4
                     sm:py-3
                     sm:text-sm
                   "
                 >
                   <Download size={15} />
-
                   Download Resume
                 </a>
               </div>
@@ -617,10 +584,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="
-              min-w-0
-              w-full
-            "
+            className="min-w-0 w-full"
           >
             {/* =========================
                 TABS
@@ -628,7 +592,7 @@ const About = () => {
 
             <div
               className="
-                mb-5
+                mb-4
                 w-full
                 overflow-x-auto
                 rounded-xl
@@ -636,20 +600,12 @@ const About = () => {
                 border-white/[0.08]
                 bg-white/[0.025]
                 p-1
-
-                sm:mb-6
+                sm:mb-5
                 sm:p-1.5
-
-                md:mb-8
+                md:mb-6
               "
             >
-              <div
-                className="
-                  flex
-                  min-w-max
-                  gap-1
-                "
-              >
+              <div className="flex min-w-max gap-1">
                 {tabs.map((tab) => {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
@@ -672,15 +628,12 @@ const About = () => {
                         font-medium
                         transition-all
                         duration-300
-
                         sm:gap-2
                         sm:px-3
                         sm:py-2.5
                         sm:text-xs
-
                         md:px-4
                         md:text-sm
-
                         ${
                           isActive
                             ? "text-white"
@@ -708,9 +661,7 @@ const About = () => {
                           relative
                           z-10
                           shrink-0
-
                           sm:size-[15px]
-
                           ${
                             isActive
                               ? "text-cyan-400"
@@ -734,7 +685,6 @@ const About = () => {
 
             <div className="min-h-0 w-full">
               <AnimatePresence mode="wait">
-
                 {/* =====================
                     EDUCATION
                 ====================== */}
@@ -758,11 +708,8 @@ const About = () => {
                           rounded-[17px]
                           bg-[#0B0E13]
                           p-4
-
                           sm:p-6
-
                           md:p-7
-
                           lg:p-8
                         "
                       >
@@ -771,7 +718,6 @@ const About = () => {
                             flex
                             flex-col
                             gap-4
-
                             sm:gap-5
                             md:flex-row
                             md:items-start
@@ -792,7 +738,6 @@ const About = () => {
                                 border-blue-400/20
                                 bg-blue-500/10
                                 text-blue-300
-
                                 sm:mb-4
                                 sm:h-11
                                 sm:w-11
@@ -807,9 +752,7 @@ const About = () => {
                                 font-semibold
                                 leading-tight
                                 text-white
-
                                 sm:text-xl
-
                                 md:text-2xl
                               "
                             >
@@ -837,13 +780,11 @@ const About = () => {
                               font-mono
                               text-[10px]
                               text-slate-400
-
                               sm:px-3
                               sm:text-xs
                             "
                           >
                             <Calendar size={12} />
-
                             2024 — 2028
                           </div>
                         </div>
@@ -854,8 +795,7 @@ const About = () => {
                             grid
                             grid-cols-1
                             gap-3
-
-                            sm:mt-7
+                            sm:mt-6
                             sm:grid-cols-2
                             sm:gap-4
                           "
@@ -867,7 +807,6 @@ const About = () => {
                               border-white/[0.07]
                               bg-black/20
                               p-3.5
-
                               sm:p-4
                             "
                           >
@@ -880,7 +819,6 @@ const About = () => {
                                 size={14}
                                 className="shrink-0 text-blue-400"
                               />
-
                               Sargodha, Pakistan
                             </p>
                           </div>
@@ -892,7 +830,6 @@ const About = () => {
                               border-white/[0.07]
                               bg-black/20
                               p-3.5
-
                               sm:p-4
                             "
                           >
@@ -905,7 +842,6 @@ const About = () => {
                                 size={14}
                                 className="shrink-0 text-cyan-400"
                               />
-
                               Currently Studying
                             </p>
                           </div>
@@ -917,11 +853,9 @@ const About = () => {
                             text-xs
                             leading-6
                             text-slate-400
-
-                            sm:mt-7
+                            sm:mt-6
                             sm:text-sm
                             sm:leading-7
-
                             md:text-base
                           "
                         >
@@ -938,8 +872,7 @@ const About = () => {
                             border-t
                             border-white/[0.07]
                             pt-5
-
-                            sm:mt-7
+                            sm:mt-6
                             sm:pt-6
                           "
                         >
@@ -966,7 +899,6 @@ const About = () => {
                                   py-1.5
                                   text-[10px]
                                   text-slate-400
-
                                   sm:px-3
                                   sm:text-xs
                                 "
@@ -1004,23 +936,12 @@ const About = () => {
                           rounded-[17px]
                           bg-[#0B0E13]
                           p-4
-
                           sm:p-6
-
                           md:p-7
-
                           lg:p-8
                         "
                       >
-                        <div
-                          className="
-                            flex
-                            items-start
-                            gap-3
-
-                            sm:gap-4
-                          "
-                        >
+                        <div className="flex items-start gap-3 sm:gap-4">
                           <div
                             className="
                               flex
@@ -1034,7 +955,6 @@ const About = () => {
                               border-cyan-400/20
                               bg-cyan-400/10
                               text-cyan-300
-
                               sm:h-11
                               sm:w-11
                             "
@@ -1049,9 +969,7 @@ const About = () => {
                                 flex-col
                                 justify-between
                                 gap-3
-
                                 sm:gap-2
-
                                 md:flex-row
                               "
                             >
@@ -1061,7 +979,6 @@ const About = () => {
                                     text-lg
                                     font-semibold
                                     text-white
-
                                     sm:text-xl
                                   "
                                 >
@@ -1090,13 +1007,11 @@ const About = () => {
                                   font-mono
                                   text-[10px]
                                   text-slate-500
-
                                   sm:px-3
                                   sm:text-xs
                                 "
                               >
                                 <Calendar size={12} />
-
                                 Present
                               </span>
                             </div>
@@ -1109,8 +1024,7 @@ const About = () => {
                             border-t
                             border-white/[0.07]
                             pt-5
-
-                            sm:mt-7
+                            sm:mt-6
                             sm:pt-6
                           "
                         >
@@ -1119,10 +1033,8 @@ const About = () => {
                               text-xs
                               leading-6
                               text-slate-400
-
                               sm:text-sm
                               sm:leading-7
-
                               md:text-base
                             "
                           >
@@ -1138,8 +1050,7 @@ const About = () => {
                               grid
                               grid-cols-1
                               gap-2.5
-
-                              sm:mt-7
+                              sm:mt-6
                               sm:grid-cols-2
                               sm:gap-3
                             "
@@ -1164,7 +1075,6 @@ const About = () => {
                                   bg-black/20
                                   px-3
                                   py-2.5
-
                                   sm:gap-3
                                   sm:px-4
                                   sm:py-3
@@ -1182,7 +1092,7 @@ const About = () => {
                             ))}
                           </div>
 
-                          <div className="mt-5 sm:mt-7">
+                          <div className="mt-5 sm:mt-6">
                             <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600 sm:text-xs">
                               Technologies Used
                             </p>
@@ -1208,7 +1118,6 @@ const About = () => {
                                     font-mono
                                     text-[10px]
                                     text-slate-400
-
                                     sm:px-3
                                     sm:text-[11px]
                                   "
@@ -1241,7 +1150,6 @@ const About = () => {
                         grid
                         grid-cols-1
                         gap-3
-
                         sm:grid-cols-2
                         sm:gap-4
                       "
@@ -1268,7 +1176,6 @@ const About = () => {
                                 rounded-[15px]
                                 bg-[#0B0E13]
                                 p-4
-
                                 sm:p-5
                               "
                             >
@@ -1286,7 +1193,6 @@ const About = () => {
                                       border
                                       border-blue-400/10
                                       bg-blue-500/[0.06]
-
                                       sm:h-10
                                       sm:w-10
                                     "
@@ -1351,7 +1257,6 @@ const About = () => {
                           rounded-[15px]
                           bg-[#0B0E13]
                           p-4
-
                           sm:p-5
                         "
                       >
@@ -1379,7 +1284,6 @@ const About = () => {
                                 py-1.5
                                 text-[10px]
                                 text-slate-400
-
                                 sm:px-3
                                 sm:text-xs
                               "
@@ -1410,12 +1314,9 @@ const About = () => {
                         grid
                         grid-cols-1
                         gap-2.5
-
                         sm:grid-cols-2
                         sm:gap-3
-
                         md:grid-cols-2
-
                         lg:grid-cols-3
                       "
                     >
@@ -1440,7 +1341,6 @@ const About = () => {
                                 rounded-[14px]
                                 bg-[#0B0E13]
                                 p-3.5
-
                                 sm:gap-3
                                 sm:p-4
                               "
@@ -1462,7 +1362,6 @@ const About = () => {
                                   duration-300
                                   group-hover:border-blue-400/20
                                   group-hover:text-blue-400
-
                                   sm:h-10
                                   sm:w-10
                                 "
@@ -1500,7 +1399,6 @@ const About = () => {
                           rounded-[15px]
                           bg-[#0B0E13]
                           p-4
-
                           sm:p-5
                         "
                       >
@@ -1515,7 +1413,6 @@ const About = () => {
                             rounded-lg
                             bg-blue-500/10
                             text-blue-400
-
                             sm:h-10
                             sm:w-10
                           "
@@ -1537,7 +1434,6 @@ const About = () => {
                     </BorderGlow>
                   </motion.div>
                 )}
-
               </AnimatePresence>
             </div>
           </motion.div>
@@ -1553,11 +1449,9 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="
-            mt-8
-
-            sm:mt-10
-
-            md:mt-12
+            mt-6
+            sm:mt-7
+            md:mt-8
           "
         >
           <BorderGlow
@@ -1583,12 +1477,10 @@ const About = () => {
                 bg-[#0B0E13]
                 p-4
                 text-center
-
-                sm:p-6
-
+                sm:p-5
                 md:flex-row
                 md:gap-5
-                md:p-7
+                md:p-6
                 md:text-left
               "
             >
@@ -1600,7 +1492,6 @@ const About = () => {
                     uppercase
                     tracking-[0.16em]
                     text-blue-400
-
                     sm:text-[10px]
                     sm:tracking-[0.18em]
                   "
@@ -1614,10 +1505,8 @@ const About = () => {
                     text-base
                     font-semibold
                     text-white
-
                     sm:mt-2
                     sm:text-lg
-
                     md:text-xl
                   "
                 >
@@ -1653,7 +1542,6 @@ const About = () => {
                   hover:border-blue-400/40
                   hover:bg-blue-500/15
                   hover:text-blue-200
-
                   sm:w-fit
                   sm:px-5
                   sm:py-3
